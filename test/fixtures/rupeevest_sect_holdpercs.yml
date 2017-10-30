@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schemecode: 1
+  rv_sect_code: 1
+  hold_perc: 9.99
+
+two:
+  schemecode: 1
+  rv_sect_code: 1
+  hold_perc: 9.99

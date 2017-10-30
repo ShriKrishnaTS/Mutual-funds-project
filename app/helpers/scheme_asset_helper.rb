@@ -1,0 +1,2 @@
+module SchemeAssetHelper
+end

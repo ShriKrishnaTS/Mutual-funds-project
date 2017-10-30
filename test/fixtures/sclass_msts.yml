@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  classcode: 1
+  classname: MyString
+  asset_code: 1
+  asset_type: MyString
+  category: MyString
+  sub_category: MyString
+  upd_flag: MyString
+
+two:
+  classcode: 1
+  classname: MyString
+  asset_code: 1
+  asset_type: MyString
+  category: MyString
+  sub_category: MyString
+  upd_flag: MyString

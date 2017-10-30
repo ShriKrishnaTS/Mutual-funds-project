@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amc_code: 1
+  schemecode: 1
+  recorddate: 2016-02-22 11:57:30
+  div_code: 1
+  exdivdate: 2016-02-22 11:57:30
+  bonusrate1: 9.99
+  bonusrate2: 9.99
+  gross: 9.99
+  corporate: 9.99
+  noncorporate: 9.99
+  status: MyString
+  upd_flag: MyString
+
+two:
+  amc_code: 1
+  schemecode: 1
+  recorddate: 2016-02-22 11:57:30
+  div_code: 1
+  exdivdate: 2016-02-22 11:57:30
+  bonusrate1: 9.99
+  bonusrate2: 9.99
+  gross: 9.99
+  corporate: 9.99
+  noncorporate: 9.99
+  status: MyString
+  upd_flag: MyString

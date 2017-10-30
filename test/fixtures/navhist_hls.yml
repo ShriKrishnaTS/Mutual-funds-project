@@ -1,0 +1,89 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schemecode: 1
+  monthhhigh_3: 9.99
+  monthlow_3: 9.99
+  mhdate_3: 2016-02-29 11:21:14
+  mldate_3: 2016-02-29 11:21:14
+  monthhhigh_6: 9.99
+  monthlow_6: 9.99
+  mhdate_6: 2016-02-29 11:21:14
+  mldate_6: 2016-02-29 11:21:14
+  monthhhigh_9: 9.99
+  monthlow_9: 9.99
+  mhdate_9: 2016-02-29 11:21:14
+  mldate_9: 2016-02-29 11:21:14
+  weekhhigh_52: 9.99
+  weeklow_52: 9.99
+  whdate_52: 2016-02-29 11:21:14
+  wldate_52: 2016-02-29 11:21:14
+  yrhigh_1: 9.99
+  yrlow_1: 9.99
+  yhdate_1: 2016-02-29 11:21:14
+  yldate_1: 2016-02-29 11:21:14
+  yrhigh_2: 9.99
+  yrlow_2: 9.99
+  yhdate_2: 2016-02-29 11:21:14
+  yldate_2: 2016-02-29 11:21:14
+  yrhigh_3: 9.99
+  yrlow_3: 9.99
+  yhdate_3: 2016-02-29 11:21:14
+  yldate_3: 2016-02-29 11:21:14
+  yrhigh_5: 9.99
+  yrlow_5: 9.99
+  yhdate_5: 2016-02-29 11:21:14
+  yldate_5: 2016-02-29 11:21:14
+  ytdhigh: 9.99
+  ytdlow: 9.99
+  ytdhdate: 2016-02-29 11:21:14
+  ytdldate: 2016-02-29 11:21:14
+  sihigh: 9.99
+  silow: 9.99
+  sihdate: 2016-02-29 11:21:14
+  sildate: 2016-02-29 11:21:14
+  upd_flag: MyString
+
+two:
+  schemecode: 1
+  monthhhigh_3: 9.99
+  monthlow_3: 9.99
+  mhdate_3: 2016-02-29 11:21:14
+  mldate_3: 2016-02-29 11:21:14
+  monthhhigh_6: 9.99
+  monthlow_6: 9.99
+  mhdate_6: 2016-02-29 11:21:14
+  mldate_6: 2016-02-29 11:21:14
+  monthhhigh_9: 9.99
+  monthlow_9: 9.99
+  mhdate_9: 2016-02-29 11:21:14
+  mldate_9: 2016-02-29 11:21:14
+  weekhhigh_52: 9.99
+  weeklow_52: 9.99
+  whdate_52: 2016-02-29 11:21:14
+  wldate_52: 2016-02-29 11:21:14
+  yrhigh_1: 9.99
+  yrlow_1: 9.99
+  yhdate_1: 2016-02-29 11:21:14
+  yldate_1: 2016-02-29 11:21:14
+  yrhigh_2: 9.99
+  yrlow_2: 9.99
+  yhdate_2: 2016-02-29 11:21:14
+  yldate_2: 2016-02-29 11:21:14
+  yrhigh_3: 9.99
+  yrlow_3: 9.99
+  yhdate_3: 2016-02-29 11:21:14
+  yldate_3: 2016-02-29 11:21:14
+  yrhigh_5: 9.99
+  yrlow_5: 9.99
+  yhdate_5: 2016-02-29 11:21:14
+  yldate_5: 2016-02-29 11:21:14
+  ytdhigh: 9.99
+  ytdlow: 9.99
+  ytdhdate: 2016-02-29 11:21:14
+  ytdldate: 2016-02-29 11:21:14
+  sihigh: 9.99
+  silow: 9.99
+  sihdate: 2016-02-29 11:21:14
+  sildate: 2016-02-29 11:21:14
+  upd_flag: MyString

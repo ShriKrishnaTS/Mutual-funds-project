@@ -1,0 +1,59 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schemecode: 1
+  upddate: 2016-02-29 11:01:30
+  datefrom: 2016-02-29 11:01:30
+  dateto: 2016-02-29 11:01:30
+  avg_x: 9.99
+  avg_y: 9.99
+  sd_x: 9.99
+  sd_y: 9.99
+  semisd_x: 9.99
+  semisd_y: 9.99
+  beta_x: 9.99
+  beta_y: 9.99
+  corelation_x: 9.99
+  corelation_y: 9.99
+  betacor_x: 9.99
+  betacor_y: 9.99
+  treynor_x: 9.99
+  treynor_y: 9.99
+  fama_x: 9.99
+  fama_y: 9.99
+  sharpe_x: 9.99
+  sharpe_y: 9.99
+  jalpha_x: 9.99
+  jalpha_y: 9.99
+  sortino_x: 9.99
+  sortino_y: 9.99
+  upd_flag: MyString
+
+two:
+  schemecode: 1
+  upddate: 2016-02-29 11:01:30
+  datefrom: 2016-02-29 11:01:30
+  dateto: 2016-02-29 11:01:30
+  avg_x: 9.99
+  avg_y: 9.99
+  sd_x: 9.99
+  sd_y: 9.99
+  semisd_x: 9.99
+  semisd_y: 9.99
+  beta_x: 9.99
+  beta_y: 9.99
+  corelation_x: 9.99
+  corelation_y: 9.99
+  betacor_x: 9.99
+  betacor_y: 9.99
+  treynor_x: 9.99
+  treynor_y: 9.99
+  fama_x: 9.99
+  fama_y: 9.99
+  sharpe_x: 9.99
+  sharpe_y: 9.99
+  jalpha_x: 9.99
+  jalpha_y: 9.99
+  sortino_x: 9.99
+  sortino_y: 9.99
+  upd_flag: MyString

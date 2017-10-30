@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Rupeevest</title>
+
+
+
+ 	<!-- <link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/font-awesome-icon.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/star-rating.css"> 
+  	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="css/nouislider.css">
+	<link rel="stylesheet" href="css/nouislider.pips.css">
+	<link rel="stylesheet" href="css/nouislider.tooltips.css">  --> 
+<%= stylesheet_link_tag "application", "data-turbolinks-track" => true %>
+<link src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+<!-- 
+  <script type="text/javascript" src="js/sortable.js"></script> -->
+  <%= javascript_include_tag "ui/sortable.js" %>
+  <script type="text/javascript">
+  function init() {
+      var sorter = tsorter.create('mytable');
+  }
+
+  window.onload = init;
+
+
+  </script>
+
+ 
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+</head>
+<body onload ="fundname_search();schemedata_landing();fundmanager();amcname();index_name()" class="landingpage">
+<div class="container-fluid">
+	<div class="container">
+		<div class="row">
+			<!-- fixed button of  -->
+			<!-- <div class="fixed-button">
+	        	<button class="button button5">Invest Now</button>
+	       	</div> -->
+<!-- 
+	       	<div class="col-xs-12 fixed-header">
+	      		<div class="col-xs-12 col-sm-3 rupeevest-logo">
+	      		<img src="images/logo-img.png">
+	      		</div>
+
+
+	      		<div class="col-xs-12 col-sm-6 search-button ">
+				<div class="input-group latest-search-button">
+				   <input type="text" id ="fund_names" class="form-control" placeholder="Search for...">
+				      <span class="input-group-btn">
+				        <button class="btn btn-default" type="button" onclick="setvalue_schemename()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+				      </span>
+				</div>
+
+		</div>
+
+
+	      			<div class="col-xs-12 col-sm-3 header-buttons">
+				<ul>
+					<li><a href=""><button class="button button5">Login</button></a></li>
+					<li><a href=""><button class="button button5">Signup</button></a></li>
+				</ul>
+			</div>
+
+
+	       	</div> -->
+
+
+
+
+
+<div class="col-xs-12 header">
+<div class="container">
+<div class="row">
+<div id="main-header-wrapper" class="main_header">
+    <div class="col-xs-12 fixed-header index1_latest_header1">
+
+        <div class="col-xs-12 col-sm-3 rupeevest-logo">
+            <%=image_tag "logo-img.png"%>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 search-button rupeevest-search-button">
+                <div class="input-group latest-search-button">
+                    <input type="text" id ="fund_names" class="form-control " placeholder="Search for...">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default " type="button" onclick="setvalue_schemename()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                      </span>
+                </div><!-- /input-group -->
+
+        </div>
+
+            <div class="col-xs-12 col-sm-3 header-buttons index1-latest-login-signup">
+                <ul>
+                    <li><a href=""><button class="button button5">Login</button></a></li>
+                    <li><a href=""><button class="button button5">Signup</button></a></li>
+                </ul>
+            </div>
+        
+
+    </div>
+</div>
+	</div>
+</div>
+</div>
+
+
+
+		
+			<div class="col-xs-12 tab-wrapper">
+				<ul class="nav nav-tabs" id="main-tabs">
+			    <li class="nav-menu" id="one"><a data-toggle="#home"  href="">Asset Class Section</a></li>
+			    <li class="nav-menu"><a data-toggle="#menu1" href="javascript:void(0)">Rupeevest Rating </a></li>
+			    <li class="nav-menu"><a data-toggle="#menu2" href="javascript:void(0)">Filters </a></li>
+			    <li class="nav-menu"><a data-toggle="#menu3" href="javascript:void(0)">Choose Columns </a></li>
+			  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade ">
+    	 	<div class="col-xs-12 col-md-6 asset-class-section">
+    		<div class="col-xs-12 col-md-6">
+    		<input type="checkbox" id="chkAllEquity" onclick = "chkbox_click(this)" name = "chkboxasset" value = "1">All Equity<br>
+		    <input type="checkbox" id="chkAllDebt" onclick = "chkbox_click(this)" value = "2">All Debt<br>
+		    <input type="checkbox"  id="chkAllHybrid" onclick = "chkbox_click(this)" value = "3">All Hybrid<br>
+		    <input type="checkbox" id="chkAllEtfs" onclick = "chkbox_click(this)" value = "4">All ETFs<br>
+				<input type="checkbox" id="chkAllothers" onclick = "chkbox_click(this)" value = "5">Others<br>
+		    <input type="checkbox" id="chkEqLc" name = "chkAllEquity" class="chkboxasset" value = "6">Equity: Large Cap<br>
+		    <input type="checkbox" id="chkEqMc" name = "chkAllEquity" class="chkboxasset" value = "7">Equity: Multi Cap<br>
+		    <input type="checkbox" id="chkEqMsC" name = "chkAllEquity" class="chkboxasset" value = "8">Equity: Mid-Small Cap<br>
+		    <input type="checkbox"id="chkEqSe" name = "chkAllEquity" class="chkboxasset" value = "9">Equity: Sector<br>
+		    <input type="checkbox" id="chkEqTx" name = "chkAllEquity" class="chkboxasset" value = "10">Equity: Tax Saving (ELSS)<br>
+		    <input type="checkbox" id="chkEqIe" name = "chkAllEquity" class="chkboxasset" value = "11">Equity: International<br>
+		    <input type="checkbox" id="chkEo" name = "chkAllEquity" class="chkboxasset" value = "12">Equity:Other<br>
+      	</div>
+    	<div class="col-xs-12 col-md-6">
+    		<input type="checkbox" id="chkDbLust" name = "chkAllDebt" value = "13">Debt: Liquid<br>
+				<input type="checkbox" id="chkDbUst" name = "chkAllDebt" value = "14">Debt: Ultra Short term<br>
+		    <input type="checkbox" id="chkDbStg" name = "chkAllDebt" value = "15">Debt: Short Term/GILT<br>
+		    <input type="checkbox" id="chkDbMlt" name = "chkAllDebt" value = "16">Debt: Medium-Long Term/GILT<br>
+		    <input type="checkbox" id="chkDbFtp" name = "chkAllDebt" value = "17">Debt: FTP/FMP<br>
+		    <input type="checkbox" id="chkDbOt" name = "chkAllDebt" value = "18">Debt: Others<br>
+		    <input type="checkbox"  id="chkHyBl" name = "chkAllHybrid" value = "19">Hybrid: Balanced(EQ oriented)<br>
+		    <input type="checkbox" id="chkHyBldo" name = "chkAllHybrid" value = "20">Hybrid: Balanced(Debt oriented)<br>
+		    <input type="checkbox" id="chkHyAr" name = "chkAllHybrid" value = "21">Hybrid: Arbitrage<br>
+		    <input type="checkbox" id="chkHyOth" name = "chkAllHybrid" value = "22">Hybrid: Others <br>
+		    <input type="checkbox" id="chkEtInd" name = "chkAllEtfs" value = "23">ETF: Index<br>
+		    <input type="checkbox" id="chkEtGol" name = "chkAllEtfs" value = "24">ETF: Gold<br>
+
+		   <!--  <a href=""><button type="text" class="home-button">button</button></a> -->
+
+    	</div>
+		 <input type="button" id="submit-selection" onclick ="selected_schemes()" value ="Submit" /> 
+    	</div>
+
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      	<div class="col-xs-12 col-md-4 rupeevest-header-wrapper">
+      		<div class="col-xs-12 rupeevest-header">
+	      		<p>RUPEEVEST RATING</p>
+	      		<div class="col-xs-12 star-checkbox">
+	      			<!-- <input type="checkbox">All<br> -->
+	      			<!-- <div class="col-xs-12" id="star-five">
+	      					<div class="col-xs-12" id="star-five">
+	      					</div>
+	      			</div -->
+
+        	   			<p><div class="rate">
+            <div class="rate-item"><input type="checkbox">All</div>
+           
+        </div></p> <br>
+	      			<p><div class="rate">
+            <div class="rate-item"><input type="checkbox">☆☆☆☆☆</div>
+           
+        </div></p> <br>
+          			<p><div class="rate">
+            <div class="rate-item"><input type="checkbox">☆☆☆☆</div>
+         
+            
+        </div></p> <br>
+           			<p><div class="rate">
+            <div class="rate-item"><input type="checkbox">☆☆☆</div>
+        
+      
+        </div></p> <br>
+           			<p><div class="rate">
+            <div class="rate-item"><input type="checkbox">☆☆</div>
+           
+          
+        </div></p> <br>
+        	   			<p><div class="rate">
+            <div class="rate-item"><input type="checkbox">☆</div>
+           
+        </div></p> <br>
+
+        	   			<p><div class="rate">
+            <div class="rate-item"><input type="checkbox">Unrated</div>
+           
+        </div></p> 
+		<!-- 	<p><input type="checkbox">Unrated</p><br> -->
+	      			<!-- <div class="rating">
+						<p><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span><input type="checkbox"></p>
+						<p><span>☆</span><span>☆</span><span>☆</span><span>☆</span><input type="checkbox"></p>
+						<p><span>☆</span><span>☆</span><span>☆</span><input type="checkbox"></p>
+						<p><span>☆</span><span>☆</span><input type="checkbox"></p>
+						<p><span>☆</span><input type="checkbox"></p>
+						<h5>Unrated<input type="checkbox"></h5><br> -->
+					<!-- 	<p><span>☆</span><span>☆</span><span>☆</span><span>☆</span><input type="checkbox"></p>
+						<p><span>☆</span><span>☆</span><span>☆</span><input type="checkbox"></p>
+						<p><span>☆</span><span>☆</span><input type="checkbox"></p>
+						<p><span>☆</span><input type="checkbox"></p>
+						<p>Unrated<input type="checkbox"><br> --> 
+					<!-- </div><br> -->
+
+	      			<!-- <div class="rating">
+						<p><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span><input type="checkbox"></p>
+					</div><br> -->
+	      			<!-- <div class="rating">
+						<p><span>☆</span><span>☆</span><span>☆</span><span>☆</span><input type="checkbox"></p>
+					</div><br>
+	      			<div class="rating">
+	      				<p><span>☆</span><span>☆</span><span>☆</span>
+	      			</div><br><input type="checkbox"></p>
+	      			<div class="rating">
+	      				<p><span>☆</span><span>☆</span><input type="checkbox"></p>
+	      			</div><br>
+	      			<div class="rating">
+	      				<p><span>☆</span><input type="checkbox"></p>
+	      			</div><br> -->
+	      			<!-- <p><input type="checkbox"><input type="text" id="hello" class="rating"></p> -->
+	      			<!-- <p><input type="checkbox"><input type="text" id="hello" class="rating"></p>
+	      			<p><input type="checkbox"><input type="text" id="hello" class="rating"></p>
+	      			<p><input type="checkbox"><input type="text" id="hello" class="rating"></p>
+	      			<p><input type="checkbox"><input type="text" id="hello" class="rating"></p> -->
+
+	      		<!-- 	<input type="checkbox">Unrated<br> -->
+
+	      		</div>
+      		</div>
+
+    	</div>
+    	<div class="col-xs-12 col-md-8 factor-header-wrapper">
+    		<div class="col-xs-12 factor-header">
+    			<p>FACTOR SCORE</p>
+    			<div class="col-xs-12 range-slider-wrapper latest1_slider">
+	    		<!-- 		<div class="layout">
+
+				   			<div class="layout-slider range-slider">
+				      				<span  class="range-slider-span"><input id="Slider6" type="slider" name="price" value="0;2056" /></span>
+				    		</div>
+	    		</div> -->
+	    			<div class="col-md-4 consistency-text">
+	    				<p>Consistency Of Return</p>
+	    					<div class="layout">
+				   			<div class="layout-slider range-slider">
+				      				<span  class="range-slider-span"><input id="Slider6" type="slider" name="price" value="0;2056" /></span>
+				    		</div>
+	    		</div>
+	    			</div>
+	    			<div class="col-md-4">
+	    				<p>Risk</p>
+	    				<div class="layout">
+
+				   			<div class="layout-slider range-slider">
+				      				<span  class="range-slider-span"><input id="Slider7" type="slider" name="price" value="0;2056" /></span>
+				    		</div>
+	    		</div>
+	    			</div>
+	    			<div class="col-md-4">
+	    				<p>Risk</p>
+	    				<div class="layout">
+
+				   			<div class="layout-slider range-slider">
+				      				<span  class="range-slider-span"><input id="Slider8" type="slider" name="price" value="0;2056" /></span>
+				    		</div>
+	    		</div>
+	    			</div>
+    			</div>
+    			<div class="col-xs-12 range-slider-wrapper">
+	    			<div class="col-md-4">
+	    				<p>Cost Factors</p>
+	    					<div class="layout">
+
+				   			<div class="layout-slider range-slider">
+				      				<span  class="range-slider-span"><input id="Slider9" type="slider" name="price" value="0;2056" /></span>
+				    		</div>
+	    		</div>
+	    			</div>
+	    			<div class="col-md-4">
+	    				<p>Portfolio Attributes</p>
+	    				<div class="layout">
+
+				   			<div class="layout-slider range-slider">
+				      				<span  class="range-slider-span"><input id="Slider10" type="slider" name="price" value="0;2056" /></span>
+				    		</div>
+	    		</div>
+	    			</div>
+    			</div>
+    			<div class="col-xs-12 bottom-condition">
+    				<div class="col-xs-12 col-md-9 condition-inner">
+    					<p>*5 denotes the best in its category,1 denotes the wrost within its category</p>
+    				</div>
+    				<div class="col-xs-12 col-md-3 Reset-wrapper">
+    					<p><a href=""><%=image_tag "reset.png"%>Reset All</a></p>
+    					<p><a href=""><%=image_tag "thumb.png"%>Done</a></p>
+    				</div>
+    			</div>
+    		</div>
+    		
+
+    	</div>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <div class="col-xs-12 filters-outer-wrapper">
+      	<div class="col-xs-12 open-closed-button-wrapper">
+
+      	<div class="filters-main-section">
+      		<div class="horizon-button main-horizon-button filters">
+      			<p>Horizon</p>
+      			<button class="button horin-button">Open</button><button class="button horion-sec-button">Closed</button>
+      		</div>
+      		<div class="nature-button main-nature-button filters">
+      			<p>Nature</p>
+
+      				<button class="button horin-button">Growth</button><button class="button horion-sec-button">Dividend</button>
+
+      		</div>
+      		<div class="col-xs-2 AMC-button amc-button2 filters">
+      			<!-- <span class="shreena">
+      				AMC <input type="checkbox" class="shrena"> Select All<br>
+
+      			</span> -->
+      			<div class="inner-amc-header">
+	      			<div class="amc-header amc-left-header">
+	      				AMC
+	      			</div>
+	      			<div class=" amc-right-header left-select-text">
+	      				<input type="checkbox" class="shrena"> Select All
+	      			</div>
+      			</div>
+
+      				<div class="select-wrap">
+                     <select class="form-control city-select" name="cityname" id="amcname">
+                     <option value="" > 42 of 42 selected</option>
+                     <option value="abu-dhabi" >Abu Dhabi</option>
+                     <option value="ajman" >Ajman</option>
+                     <option value="al-ain" >Al Ain</option>
+                     <option value="dubai" >Dubai</option>
+                     <option value="fujairah" >Fujairah</option>
+                     <option value="ras-al-khaimah" >Ras Al Khaimah</option>
+                     <option value="sharjah" >Sharjah</option>
+                     <option value="umm-al-quwain">Umm Al Quwain</option>
+                     </select>
+                   </div>
+      		</div>
+
+      		<div class="col-xs-2 AMC-button amc-button2 filters">
+      			<!-- <span class="shreena">
+      				AMC <input type="checkbox" class="shrena"> Select All<br>
+
+      			</span> -->
+      			<div class="inner-amc-header fund-manager-text">
+	      			<div class="amc-header amc-left-header">
+	      				Fund Manager
+	      			</div>
+	      			<div class=" amc-right-header">
+	      				<input type="checkbox" class="shrena"> Select All
+	      			</div>
+      			</div>
+
+      				<div class="select-wrap">
+                     <select class="form-control city-select" name="cityname" id="fundmanager">
+                     <option value="" > 42 of 42 selected </option>
+                     <option value="abu-dhabi" >Abu Dhabi</option>
+                     <option value="ajman" >Ajman</option>
+                     <option value="al-ain" >Al Ain</option>
+                     <option value="dubai" >Dubai</option>
+                     <option value="fujairah" >Fujairah</option>
+                     <option value="ras-al-khaimah" >Ras Al Khaimah</option>
+                     <option value="sharjah" >Sharjah</option>
+                     <option value="umm-al-quwain">Umm Al Quwain</option>
+                     </select>
+                   </div>
+      		</div>
+
+      		<div class="col-xs-2 AMC-button amc-button2 filters">
+      			<!-- <span class="shreena">
+      				AMC <input type="checkbox" class="shrena"> Select All<br>
+
+      			</span> -->
+      			<div class="inner-amc-header">
+	      			<div class="amc-header amc-left-header">
+	      				Index
+	      			</div>
+	      			<div class=" amc-right-header left-select-text">
+	      				<input type="checkbox" class="shrena"> Select All
+	      			</div>
+      			</div>
+
+      				<div class="select-wrap">
+                     <select class="form-control city-select" name="cityname" id="indexname">
+                     <option value="" > 42 of 42 selected</option>
+                     <option value="abu-dhabi" >Abu Dhabi</option>
+                     <option value="ajman" >Ajman</option>
+                     <option value="al-ain" >Al Ain</option>
+                     <option value="dubai" >Dubai</option>
+                     <option value="fujairah" >Fujairah</option>
+                     <option value="ras-al-khaimah" >Ras Al Khaimah</option>
+                     <option value="sharjah" >Sharjah</option>
+                     <option value="umm-al-quwain">Umm Al Quwain</option>
+                     </select>
+                   </div>
+      		</div>
+      		</div>
+
+      		<div class="col-xs-12 inner-slider-wrapper">
+      			<div class="col-xs-2 ">
+      				<!-- <div id="slider3">
+
+						</div> -->
+						Asset Size
+				<div class="layout">
+
+				   			<div class="layout-slider range-slider">
+				      				<span  class="range-slider-span"><input id="Slider1" type="slider" name="price" value="0;2056" /></span>
+				    		</div>
+	    		</div>
+				<!-- 	<div class="col-xs-2 min-range-box">
+						<p>0</p>
+						<input type="text">
+					</div>
+					<div class="col-xs-2 max-range-box">
+						<p>23</p>
+						<input type="text">
+					</div> -->
+      			</div>
+
+      			<div class="col-xs-2 slider-property">
+      				 Age
+      				<div class="layout">
+
+			   			 <div class="layout-slider range-slider">
+			      				<span  class="range-slider-span"><input id="Slider2" type="slider" name="price" value="0;2056" /></span>
+			    		</div>
+    				</div>
+					<!-- <div class="col-xs-2 min-range-box">
+						<p>0</p>
+						<input type="text">
+					</div> -->
+				<!-- 	<div class="col-xs-2 max-range-box">
+						<p>23</p>
+						<input type="text">
+					</div> -->
+      			</div>
+
+      			<div class="col-xs-2 slider-property">
+      				Exit Load
+      				<div class="layout">
+
+			   			 <div class="layout-slider range-slider">
+			      				<span  class="range-slider-span"><input id="Slider3" type="slider" name="price" value="0;2056" /></span>
+			    		</div>
+    				</div>
+					<!-- <div class="col-xs-2 min-range-box">
+						<p>0</p>
+						<input type="text">
+					</div> -->
+					<!-- <div class="col-xs-2 max-range-box">
+						<p>23</p>
+						<input type="text">
+					</div> -->
+      			</div>
+
+      			<div class="col-xs-2 slider-property">
+      				Expense Ratio
+      				<div class="layout">
+
+			   			 <div class="layout-slider range-slider">
+			      				<span  class="range-slider-span"><input id="Slider4" type="slider" name="price" value="0;2056" /></span>
+			    		</div>
+    				</div>
+				<!-- 	<div class="col-xs-2 min-range-box">
+						<p>0</p>
+						<input type="text">
+					</div> -->
+					<!-- <div class="col-xs-2 max-range-box">
+						<p>23</p>
+						<input type="text">
+					</div> -->
+      			</div>
+      			<div class="col-xs-2 slider-property">
+      				Turnover Ratio
+      				<div class="layout">
+
+			   			 <div class="layout-slider range-slider">
+			      				<span  class="range-slider-span"><input id="Slider5" type="slider" name="price" value="0;2056" /></span>
+			    		</div>
+    				</div>
+				<!-- 	<div class="col-xs-2 min-range-box">
+						<p>0</p>
+						<input type="text">
+					</div> -->
+					<!-- <div class="col-xs-2 max-range-box">
+						<p>23</p>
+						<input type="text">
+					</div> -->
+      			</div>
+      		</div>
+
+
+      		<div class="col-xs-12 Reset-All-wrapper">
+    					<p><a href=""><%=image_tag "reset.png"%> Reset All</a></p>
+    					<div class="pull-right">
+    						<p ><a href=""><%=image_tag "thumb.png"%>  Done</a></p>
+    					</div>
+    				</div>
+
+      	</div>
+
+      </div>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <div class="col-xs-12 col-md-4 righ-side-rating">
+      	<div class="col-xs-12 header-of-rating">
+      		<p>RATING</p>
+      		<div class="col-xs-12 return-ckeckbox">
+      			<input type="checkbox">Rupeevest Rating<br>
+      			<input type="checkbox">Total Return<br>
+      			<input type="checkbox">Consistency of Return<br>
+      			<input type="checkbox">Risk<br>
+      			<input type="checkbox">Cost Factors<br>
+      			<input type="checkbox">Portfolio Attributes<br>
+
+      		</div>
+
+      	</div>
+      	<div class="col-xs-12 header-of-rating">
+      		<p>RETURN</p>
+      		<div class="col-xs-12 return-ckeckbox">
+      			<input type="checkbox">Return (1m)<br>
+      			<input type="checkbox">Return (3m)<br>
+      			<input type="checkbox">Return (6m)<br>
+      			<input type="checkbox">Return (1 yr)<br>
+      			<input type="checkbox">Return (2 yr)<br>
+      			<input type="checkbox">Return (3 yr)<br>
+      			<input type="checkbox">Return (5 yr)<br>
+      			<input type="checkbox">Return (10 yr)<br>
+      			<input type="checkbox">Last 10 years,annual return<br>
+      			<input type="checkbox">Last 10 quarter,quarterly return<br>
+      			<input type="checkbox">Last 10 month,monthly return<br>
+
+      		</div>
+      	</div>
+      </div>
+      <div class="col-xs-12 col-md-8 left-side-rating">
+      	<div class="col-xs-12 choose-column-description">
+      		<p>BASIC</p>
+      		<div class="col-xs-12 choose-column-checkbox">
+      			<input type="checkbox">AUM (in crores)<br>
+      			<input type="checkbox">NAV<br>
+      			<input type="checkbox">Expense Ratio<br>
+      			<input type="checkbox">Turnover Ratio<br>
+      			<input type="checkbox">Exit Load<br>
+      			<input type="checkbox">Launch Date<br>
+      			<input type="checkbox">Minimum Investment<br>
+      			<input type="checkbox">Highest Sector Allocation<br>
+      			<input type="checkbox">Average Maturity (in years)<br>
+      			<input type="checkbox">Modified Duration (in years)<br>
+      			<input type="checkbox">Yield To Maturity<br>
+
+      		</div>
+			
+      	</div>
+      		<div class="col-xs-12 risk-return-parameters main-parameter">
+      			<p>RISK/RETURN PARAMETERS</p>
+      			<div class="col-xs-8 main-para-right-sec">
+      				<input type="checkbox">Beta<br>
+      				<input type="checkbox">Sharpe<br>
+      				<input type="checkbox">Sortino<br>
+      				<input type="checkbox">Standard Deviation<br>
+      				<input type="checkbox">Alpha<br>
+      			</div>
+
+      			<div class="col-xs-12 col-sm-4 main-para-left-sec">
+      				<input type="button" id="submit-selection" onclick ="selected_schemes()" value ="Save Columns" />
+      			</div>
+      		</div>
+
+      	</div>
+      </div>
+
+    </div>
+  </div>
+			</div>
+			<div class="col-xs-12 lower-buttons-wrapper no-padding">
+				<div class="col-xs-12 no-padding date-format1" id="date-wrapper">
+				  	<ul>
+              <li><span>From</span><input class="date-picker" class="XXinput calendar" placeholder="dd-mmm-yyyy" type="text" title="Date in the format dd-mmm-yyyy" tabindex="3" readonly="readonly"></li>
+              <li><span>To</span><input class="date-picker" class="XXinput calendar" placeholder="dd-mmm-yyyy" type="text" title="Date in the format dd-mmm-yyyy" tabindex="3" readonly="readonly"></li>
+            </ul>
+  				</div>
+  				<div class="col-xs-12 download-compare no-padding">
+  					<ul>
+  						<li><a href=""><button class="button button5">Download</button></a></li>
+  						<li><button class="button button5" onclick = "add_compare()">Add To Compare</button></li>
+  						<!-- <li><a href=""><button class="button button5">Invest Now</button></a></li> -->
+  					</ul>
+  				</div>
+			</div>
+
+<div class="fixed-button">
+	        	<button class="button button5">Invest Now</button>
+	       	</div>
+			<div class="col-md-12">
+				<button class="button button5 col-md-3 snapShotTab">Snapshot</button>
+				<button class="button button5 col-md-3 historicalTab">Historical Returns</button>
+			</div>
+			
+			<div class="col-md-12">
+				<button class="button button5 col-md-3 annuallyTab">Annually</button>
+				<button class="button button5 col-md-3 quarterlyTab">Quarterly</button>
+				<button class="button button5 col-md-3 monthlyTab">Monthly</button>
+			</div>	
+	<!-- <span  class="range-slider-span"><input id="Slider2" type="slider" name="price" value="0;2056" /></span> -->
+			<div class="col-xs-12 table-layout-rows tablesorter" id="table-main-header">
+				<table style="width:100%" id="mytable" border-collapse="collapse">
+<!-- 				<thead>
+					<tr class="bg-color">
+						<th>Select</th>
+						<th>Fund</th>
+						<th>Rupeevest <br>Rating</th>
+						<th>AUM <br>(in crores)</th>
+						<th>Return<br>(1 year)</th>
+						<th>Return<br>(3 year)</th>
+						<th>Return<br> (5 year)</th>
+						<th>Expense<br>Ratio</th>
+						<th>Highest Sector<br>Allocation</th>
+					</tr>
+				</thead>	
+					<tbody id ="tblData"  style="overflow:auto;height:500px;width:100%">
+					</tbody>
+					
+						
+					
+					 <tr>
+						<td><input type="checkbox"></td>
+						<td>hello dileep how are you what are you doing</td>
+						<td></td>
+						<td>...b</td>
+						<td>...e</td>
+						<td>...d</td>
+						<td>...c</td>
+						<td>...a</td>
+						<td>...f</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...a</td>
+						<td>...d</td>
+						<td>...e</td>
+						<td>...f</td>
+						<td>...d</td>
+						<td>...c</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr> 
+		
+						<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr>
+						<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr>
+						<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr>
+						<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr>
+						<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr>
+						<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr>
+						<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr>
+						<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr>
+						<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr>
+						<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr> -->
+
+					    <thead>
+					 <tr class="bg-color">
+						<th>Select</th>
+						<th>Fund</th>
+						<th>Rupeevest Rating</th>
+						<th>AUM (in crores)</th>
+						<th>Return(1 year)</th>
+						<th>Return(3 year)</th>
+						<th>Return (5 year)</th>
+						<th>ExpenseRatio</th>
+						<th>Highest Sector Allocation</th>
+					</tr> 
+                  <!-- <tr class="bg-color">
+						<th>Select</th>
+						<th>Fund</th>
+						<th>Rupeevest Rating</th>
+						<th>AUM (in crores)</th>
+						<th>Return(1 year)</th>
+						<th>Return(3 year)</th>
+						<th>Return (5 year)</th>
+						<th>ExpenseRatio</th>
+						<th>Highest Sector Allocation</th>
+						<th>returns_1month</th>
+						<th>returns_3month</th>
+						<th>turnover_ratio</th>
+						<th>exitload</th>
+						<th>navrs</th>
+						<th>inception_date</th>
+						<th>minimum_investment</th>
+						<th>betax_returns</th>
+						<th>alphax_returns</th>
+						<th>sotinox_returns</th>
+						<th>sharpex_returns</th>
+						<th>sdx_returns</th>
+						<th>cost_factor</th>
+						<th>risk</th>
+						<th>consistency_of_return</th>
+						<th>total_return</th>
+					
+
+					</tr>
+					 -->
+
+
+
+
+          </thead>
+    <tbody id ="tblData"  style="overflow:auto;height:500px;width:100%">
+      <!-- <tr>
+        <td><input type="checkbox"></td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>Frank</td>
+        <td>fbach@yahoo.com</td>
+        <td>$50.00</td>
+        <td>http://www.frank.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>Jason</td>
+        <td>jdoe@hotmail.com</td>
+        <td>$100.00</td>
+        <td>http://www.jdoe.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>Tim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+       <tr>
+        <td><input type="checkbox"></td>
+        <td>ATim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+       <tr>
+        <td><input type="checkbox"></td>
+        <td>BTim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+       <tr>
+        <td><input type="checkbox"></td>
+        <td>CTim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+       <tr>
+        <td><input type="checkbox"></td>
+        <td>DTim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+       <tr>
+        <td><input type="checkbox"></td>
+        <td>Tim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+       <tr>
+        <td><input type="checkbox"></td>
+        <td>Tim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+       <tr>
+        <td><input type="checkbox"></td>
+        <td>Tim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+       <tr>
+        <td><input type="checkbox"></td>
+        <td>Tim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+       <tr>
+        <td><input type="checkbox"></td>
+        <td>Tim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+       <tr>
+        <td><input type="checkbox"></td>
+        <td>Tim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+       <tr>
+        <td><input type="checkbox"></td>
+        <td>Tim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+       <tr>
+        <td><input type="checkbox"></td>
+        <td>Tim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+       <tr>
+        <td><input type="checkbox"></td>
+        <td>Tim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+       <tr>
+        <td><input type="checkbox"></td>
+        <td>Tim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+       <tr>
+        <td><input type="checkbox"></td>
+        <td>Tim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+       <tr>
+        <td><input type="checkbox"></td>
+        <td>Tim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+       <tr>
+        <td><input type="checkbox"></td>
+        <td>Tim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+       <tr>
+        <td><input type="checkbox"></td>
+        <td>Tim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+       <tr>
+        <td><input type="checkbox"></td>
+        <td>Tim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+       <tr>
+        <td><input type="checkbox"></td>
+        <td>Tim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+       <tr>
+        <td><input type="checkbox"></td>
+        <td>Tim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr>
+       <tr>
+        <td><input type="checkbox"></td>
+        <td>Tim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+      </tr> -->
+    </tbody>  
+				</table>
+			</div>
+			<!-- second section -->
+
+
+					</div>
+	</div>
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %> 
+
+	 <%= javascript_include_tag "ui/jquery-2.2.3.js" %>
+	  <%= javascript_include_tag "ui/jquery-ui.js" %>
+	 <%= javascript_include_tag "js/landing.js" %>
+	  <%= javascript_include_tag "ui/jshashtable-2.1_src.js" %>
+	  <%= javascript_include_tag "ui/jquery.numberformatter-1.2.3.js" %>
+	   <%= javascript_include_tag "ui/tmpl.js" %>
+	   <%= javascript_include_tag "ui/jquery.dependClass-0.1.js" %>
+	    <%= javascript_include_tag "ui/draggable-0.1.js" %>
+	     <%= javascript_include_tag "ui/jquery.slider.js" %>
+	     
+	  
+	  
+
+	  
+
+
+	
+<style type="text/css">
+	.table-layout-rows {
+    padding: 0px;
+    margin-top: 11px;
+}
+</style>
+
+
+
+ <script type="text/javascript" charset="utf-8">
+ var slider = document.getElementById('slider');
+
+var slider = document.getElementById('slider1');
+
+
+var slider = document.getElementById('slider2');
+
+
+var slider = document.getElementById('slider3'); 
+
+ $('.date-picker').datepicker({})
+/*var nowTemp = new Date();
+var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+
+var checkin = $('.date-picker').datepicker({
+  onRender: function(date) {
+    return date.valueOf() < now.valueOf() ? 'disabled' : '';
+  }
+}).on('changeDate', function(ev) {
+  if (ev.date.valueOf() > checkout.date.valueOf()) {
+    var newDate = new Date(ev.date)
+    newDate.setDate(newDate.getDate() + 1);
+    checkout.setValue(newDate);
+  }
+  checkin.hide();
+  $('#dpd2')[0].focus();
+}).data('datepicker');
+var checkout = $('#dpd2').datepicker({
+  onRender: function(date) {
+    return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+  }
+}).on('changeDate', function(ev) {
+  checkout.hide();
+}).data('datepicker');*/
+
+
+
+      // jQuery("#Slider1").slider({ from: 0, to: 2056, step: 50, smooth: true, round: 0, skin: "plastic" });
+      $(document).ready(function(){
+
+
+
+      		$('.nav-menu').click(function() {
+		
+		var contentDiv = $(this).find('a').attr('data-toggle');
+		if($(this).hasClass('tab-active')){
+		
+	       $(this).removeClass('tab-active');
+	       $(contentDiv).removeClass('active').addClass('fade');
+	      return false;
+		}
+		
+			$('.nav-menu').removeClass('tab-active')
+		    $(this).addClass('tab-active');
+		    if(contentDiv == "#menu1"){
+ setTimeout(function(){
+		 
+
+               jQuery("#Slider6").slider({ from: 0, to: 2056, step: 50, smooth: true, round: 0, skin: "plastic" });
+       jQuery("#Slider7").slider({ from: 0, to: 2056, step: 50, smooth: true, round: 0, skin: "plastic" });
+          jQuery("#Slider8").slider({ from: 0, to: 2056, step: 50, smooth: true, round: 0, skin: "plastic" });
+             jQuery("#Slider9").slider({ from: 0, to: 2056, step: 50, smooth: true, round: 0, skin: "plastic" });
+                jQuery("#Slider10").slider({ from: 0, to: 2056, step: 50, smooth: true, round: 0, skin: "plastic" });
+		 },500)
+		    }
+		    else if(contentDiv == "#menu2"){
+		    		 setTimeout(function(){
+		 	jQuery("#Slider1").slider({ from: 0, to: 2056, step: 50, smooth: true, round: 0, skin: "plastic" });
+       jQuery("#Slider2").slider({ from: 0, to: 2056, step: 50, smooth: true, round: 0, skin: "plastic" });
+          jQuery("#Slider3").slider({ from: 0, to: 2056, step: 50, smooth: true, round: 0, skin: "plastic" });
+             jQuery("#Slider4").slider({ from: 0, to: 2056, step: 50, smooth: true, round: 0, skin: "plastic" });
+                jQuery("#Slider5").slider({ from: 0, to: 2056, step: 50, smooth: true, round: 0, skin: "plastic" });
+
+              
+		 },500)
+		    }
+
+	
+
+		$('.tab-pane').removeClass('active').addClass('fade');
+        $(contentDiv).addClass('active').removeClass('fade')
+
+		
+		
+});
+
+jQuery(document).on("scroll", function(){
+	/*console.log('hjdbshjas');*/
+	       	var homeClassName = $('#home').attr('class');
+	       	var menu1ClassName = $('#menu1').attr('class');
+	       	var menu2ClassName = $('#menu2').attr('class');
+	       	var menu3ClassName = $('#menu3').attr('class');
+       	if(homeClassName == "tab-pane active"){
+       		var scrollTopHeight = 476;	
+       	}
+       	else if(menu1ClassName == "tab-pane active" || menu3ClassName == "tab-pane active"){
+       		var scrollTopHeight = 630;
+       	}
+       	else if(menu2ClassName == "tab-pane active"){
+       		var scrollTopHeight = 459;	
+       	}
+       	else{
+       		var scrollTopHeight = 205;
+       	}
+       if (jQuery("body").scrollTop()>scrollTopHeight){
+   	jQuery('.bg-color').css({'position': 'fixed', 'top': '60px'});
+   	jQuery('.landingpage #table-main-header .bg-color th').css('width','11.21%');
+}
+else
+               {
+jQuery('.bg-color').css({'position': 'relative', 'top': '0px'});
+jQuery('.landingpage #table-main-header .bg-color th').css('width','11%');
+}
+}); 
+
+
+				
+					$(".snapShotTab").css("display","block");
+					$(".historicalTab").css("display","block");
+					$(".annuallyTab").css("display","none");
+					$(".quarterlyTab").css("display","none");
+					$(".monthlyTab").css("display","none");
+					$("#snapShotTable").css("display","block");
+					$("#annuallyTable").css("display","none");
+					$("#quarterlyTable").css("display","none");
+					$("#monthlyTable").css("display","none");					
+					$(".snapShotTab").click(function(){
+						$(".annuallyTab").css("display","none");
+						$(".quarterlyTab").css("display","none");
+						$(".monthlyTab").css("display","none");
+						$("#snapShotTable").css("display","block");
+						$("#annuallyTable").css("display","none");
+						$("#quarterlyTable").css("display","none");
+						$("#monthlyTable").css("display","none");								
+					});
+					$(".historicalTab").click(function(){
+						$(".annuallyTab").css("display","block");
+						$(".quarterlyTab").css("display","block");
+						$(".monthlyTab").css("display","block");
+							
+					});
+					$(".annuallyTab").click(function(){
+						$("#snapShotTable").css("display","none");
+						$("#annuallyTable").css("display","block");
+						$("#quarterlyTable").css("display","none");
+						$("#monthlyTable").css("display","none");							
+					});
+					$(".quarterlyTab").click(function(){
+						$("#snapShotTable").css("display","none");
+						$("#annuallyTable").css("display","none");
+						$("#quarterlyTable").css("display","block");
+						$("#monthlyTable").css("display","none");							
+					});
+					$(".monthlyTab").click(function(){
+						$("#snapShotTable").css("display","none");
+						$("#annuallyTable").css("display","none");
+						$("#quarterlyTable").css("display","none");
+						$("#monthlyTable").css("display","block");							
+					});
+				
+
+
+
+});
+
+
+
+</script>
+
+
+
+ </div>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schemecode: 1
+  expenceratio_date: 2016-06-06 07:52:41
+  expenceratio: 9.99
+  turnover_ratio: 9.99
+  turnover_date: 2016-06-06 07:52:41
+  exitload_date: 2016-06-06 07:52:41
+  exitload: 9.99
+  exitload_remarks: MyString
+  inception_date: 2016-06-06 07:52:41
+  inception_return: 9.99
+  lockperiod: 9.99
+  minimum_investment: 9.99
+  redemption_period: 1
+  fund_manager: MyString
+  fund_house: MyString
+  navrs: 9.99
+  navchange: MyString
+  decimal: MyString
+  navdate: 2016-06-06 07:52:41
+  aumdate: 2016-06-06 07:52:41
+  aumtotal: 9.99
+  index_code: 1
+  index_name: MyString
+  rank_ytd: 1
+  rank_1month: 1
+  rank_3month: 1
+  rank_1year: 1
+  rank_3year: 1
+  rank_5year: 1
+  ytd_returns: 9.99
+  returns_1month: 9.99
+  returns_3month: 9.99
+  returns_1year: 9.99
+  returns_3year: 9.99
+  returns_5year: 9.99
+
+two:
+  schemecode: 1
+  expenceratio_date: 2016-06-06 07:52:41
+  expenceratio: 9.99
+  turnover_ratio: 9.99
+  turnover_date: 2016-06-06 07:52:41
+  exitload_date: 2016-06-06 07:52:41
+  exitload: 9.99
+  exitload_remarks: MyString
+  inception_date: 2016-06-06 07:52:41
+  inception_return: 9.99
+  lockperiod: 9.99
+  minimum_investment: 9.99
+  redemption_period: 1
+  fund_manager: MyString
+  fund_house: MyString
+  navrs: 9.99
+  navchange: MyString
+  decimal: MyString
+  navdate: 2016-06-06 07:52:41
+  aumdate: 2016-06-06 07:52:41
+  aumtotal: 9.99
+  index_code: 1
+  index_name: MyString
+  rank_ytd: 1
+  rank_1month: 1
+  rank_3month: 1
+  rank_1year: 1
+  rank_3year: 1
+  rank_5year: 1
+  ytd_returns: 9.99
+  returns_1month: 9.99
+  returns_3month: 9.99
+  returns_1year: 9.99
+  returns_3year: 9.99
+  returns_5year: 9.99

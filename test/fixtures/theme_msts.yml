@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  theme_code: 1
+  theme_type: MyString
+  upd_flag: MyString
+
+two:
+  theme_code: 1
+  theme_type: MyString
+  upd_flag: MyString

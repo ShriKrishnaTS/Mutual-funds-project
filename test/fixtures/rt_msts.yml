@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tr_code: 1
+  rt_name: MyString
+  sebi_reg_no: MyString
+  address1: MyString
+  address2: MyString
+  address3: MyString
+  state: MyString
+  tel: MyString
+  fax: MyString
+  website: MyString
+  reg_address: MyString
+  email: MyString
+  upd_flag: MyString
+
+two:
+  tr_code: 1
+  rt_name: MyString
+  sebi_reg_no: MyString
+  address1: MyString
+  address2: MyString
+  address3: MyString
+  state: MyString
+  tel: MyString
+  fax: MyString
+  website: MyString
+  reg_address: MyString
+  email: MyString
+  upd_flag: MyString

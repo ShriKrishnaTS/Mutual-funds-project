@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schemecode: 1
+  navdate: 2016-08-23 08:08:34
+  month6_yvalue: 9.99
+  year1_yvalue: 9.99
+  year3_yvalue: 9.99
+  year5_yvalue: 9.99
+
+two:
+  schemecode: 1
+  navdate: 2016-08-23 08:08:34
+  month6_yvalue: 9.99
+  year1_yvalue: 9.99
+  year3_yvalue: 9.99
+  year5_yvalue: 9.99

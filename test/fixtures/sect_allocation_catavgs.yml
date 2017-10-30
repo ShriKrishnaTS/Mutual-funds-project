@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  classification_id: 1
+  sect_code: 1
+  sect_cat_avg: 9.99
+
+two:
+  classification_id: 1
+  sect_code: 1
+  sect_cat_avg: 9.99

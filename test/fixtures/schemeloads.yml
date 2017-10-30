@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schemecode: 1
+  ldate: 2016-02-23 12:08:22
+  ltypecode: 1
+  lsrno: 1
+  frmamount: 9.99
+  uptoamount: 9.99
+  minperiod: 1
+  maxperiod: 1
+  min: MyString
+  max: MyString
+  entryload: 9.99
+  exitload: 9.99
+  remarks: MyString
+  upd_flag: MyString
+
+two:
+  schemecode: 1
+  ldate: 2016-02-23 12:08:22
+  ltypecode: 1
+  lsrno: 1
+  frmamount: 9.99
+  uptoamount: 9.99
+  minperiod: 1
+  maxperiod: 1
+  min: MyString
+  max: MyString
+  entryload: 9.99
+  exitload: 9.99
+  remarks: MyString
+  upd_flag: MyString

@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SnapShot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- <link rel="stylesheet" type="text/css" href="stylesheets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" /> -->
+   
+      
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+ 
+    
+</head>
+<body onload ="compare_value()" >
+
+
+
+<div class="container-fluid">
+
+<div class="row comparison-search-header comparison_main_header">
+    <div class="col-xs-12 comparison-first-header">
+            <div id="header">
+                <div class="col-xs-12 col-md-4 comparison-logo">
+                       <%=image_tag "logo-img.png"%>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <form class="navbar-form" role="search">
+                        <div class="input-group add-on">
+                            <input class="form-control comparison-control" placeholder="Search" name="srch-term"  id ="fund_names"
+                                   type="text">
+                            <div class="input-group-btn">
+                                <button class="btn btn-warning" type="submit" onclick="setvalue_schemename()"><i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-xs-12 col-md-4 star-one ">
+                    <button type="button" class="btn btn-default">Login</button>
+                    <button type="button" class="btn btn-default">Sign Up</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="container">
+    <!--      header starts here -->
+     <!--    <div class="col-xs-12 comparison-header">
+            <div class="col-xs-12 col-sm-8 comparison-left-header">
+                  <span class="glyphicon comparison-glyphicon glyphicon-search"></span>
+                 <input class="comparison-maain-header" type="text" placeholder="">
+
+            </div>
+
+            <div class="col-xs-12 col-sm-2">
+                <button class="login header-buttons sign-up">Login</button>
+            </div>
+
+            <div class="col-xs-12 col-sm-2">
+                <button class="login header-buttons sign-up">Signup</button>
+            </div>
+
+        </div> -->
+   <!--       <div class="row comparison-search-header">
+            <div id="header">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <form class="navbar-form" role="search">
+                        <div class="input-group add-on">
+                            <input class="form-control comparison-control" placeholder="Search" name="srch-term" id="srch-term"
+                                   type="text">
+                            <div class="input-group-btn">
+                                <button class="btn btn-warning" type="submit"><i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-2 star-one left-header pull-right">
+                    <button type="button" class="btn btn-default">Login</button>
+                    <button type="button" class="btn btn-default">Sign Up</button>
+                </div>
+            </div>
+        </div> -->
+
+    <!--      header ends here -->
+
+    <div class="col-xs-12 comparison-sec-header">
+        <div class="col-xs-12 col-sm-6 comparison-left-input">
+            <span class="glyphicon comparison-glyphicon glyphicon-search"></span>
+            <input class="form-control comparison-control" placeholder="Add fund for comparison" name="srch-term" id="srch-term" type="text">
+
+        </div>
+
+        <div class="col-xs-12 col-sm-6 comparison-right-input">
+            <button class="add-button ">add</button>
+     
+        </div>
+    </div>
+
+     <!--  start  common section for all three jpgs -->
+     <div class="row">
+        <div class="comparison-section comparison-common-section">
+            <div class="comparison-parameter">
+                <div class=" comparison-inner-text comparison-select-text">
+                    <p>Comparison of<br>selected funds<br>based on various<br>parameters</p>
+                </div>
+            </div>
+
+            <div class=" hdfc-text content main-section  firstSection" id="comp-main" data-close="firstSection">
+                <%= image_tag "cancel.png",:class=>'close-image' %>
+                <div class="hdfc-top-text">
+                    <p>HDFC Top 200 Fund-G</p>
+                </div>
+                <div class="hdfc-bottom-text">
+                    <p>Prashant jain<br>Equity:Large Cap| S&P BSE 500<br>12802 cr</p>
+                </div>
+
+                <div class="rating">
+                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                </div>
+            </div>
+
+             <div class="hdfc-text content  main-section secondSection" data-close="secondSection">
+                 <%= image_tag "cancel.png",:class=>'close-image' %>
+                <div class=" bnp-top-text">
+                    <p>BNP Paribas Long Term Equity Fund</p>
+                </div>
+                <div class="hdfc-bottom-text">
+                    <p>Shreyash Devalkar<br>Equity:Large Cap| S&P BSE 500<br>12802 cr</p>
+                </div>
+
+                <div class="rating">
+                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                </div>
+            </div>
+
+            <div class="hdfc-text content main-section thirdSection" data-close="thirdSection">
+               <%= image_tag "cancel.png",:class=>'close-image' %>
+                <div class=" hdfc-top-text">
+                    <p>HDFC Top 200 Fund-G</p>
+                </div>
+                <div class=" hdfc-bottom-text">
+                    <p>Prashant jain<br>Equity:Large Cap| S&P BSE 500<br>12802 cr</p>
+                </div>
+
+                <div class="rating">
+                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                </div>
+            </div>
+
+            <div class="hdfc-text content main-section forthSection" data-close="forthSection">
+                <%= image_tag "cancel.png",:class=>'close-image' %>
+                <div class="  bnp-top-text">
+                   <p>BNP Paribas Long Term Equity Fund</p>
+                </div>
+                <div class=" hdfc-bottom-text">
+                    <p>Shreyash Devalkar<br>Equity:Large Cap| S&P BSE 500<br>12802 cr</p>
+                </div>
+
+                <div class="rating">
+                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                </div>
+            </div>
+        </div>
+
+</div>
+     <!--  end  common section for all three jpgs  -->
+
+
+    <!--  top section starts here -->
+    <div class="row comparison-first-section">
+
+        <div class="expense-section">
+            <div class=" expense-inner-section">
+                <p class="important-text">Expense (%)</p>
+            </div>
+
+            <div class=" expense-inner-section">
+                <p>Turnover Ratio</p>
+            </div>
+
+            <div class=" expense-inner-section">
+                <p class="important-text">Exit Load (%)</p>
+            </div>
+
+            <div class=" expense-inner-section">
+                <p>Lock in Period</p>
+            </div>
+
+            <div class=" expense-inner-section">
+                <p class="important-text">Inception</p>
+            </div>
+
+            <div class=" expense-inner-section">
+                <p>Return since Inception</p>
+            </div>
+
+            <div class=" expense-inner-section">
+                <p class="important-text">Minimum Investment</p>
+            </div>
+
+            <div class=" expense-inner-section">
+                <p>Redemption Period</p>
+            </div>
+  </div>
+
+        <div class="expense-inner-section1 comp-main main-section firstSection" data-close="firstSection">
+            <div class=" expensive-left-section"id="comparison-id">
+            <p id = "exratio"> </p>
+            </div>
+
+            <div class=" expensive-left-section"id="comparison-id">
+            <p id = "turnover_ratio">2 </p>
+            </div>
+
+            <div class=" expensive-left-section"id="comparison-id" >
+             <p id = "exitload"> </p>
+            </div>
+            
+            <div class="expensive-left-section"id="comparison-id">
+            <p id = "lockperiod"> </p>
+            </div>
+
+            <div class=" expensive-left-section"id="comparison-id">
+            <p id = "incdate"> </p>
+            </div>
+            
+            <div class=" expensive-left-section"id="comparison-id">
+            <p id = "incret"> </p>
+            </div>
+
+            <div class=" expensive-left-section"id="comparison-id">
+            <p id = "mininvt"> 2</p>
+            </div>
+            
+            <div class=" expensive-left-section"id="comparison-id">
+            <p id ="exitload"> 2</p>
+
+            </div>
+        </div>
+
+
+         <div class="expense-inner-section1 main-section secondSection" data-close="secondSection">
+            <div class=" expensive-left-section">
+           <p id = "exratio"> 2</p>
+            </div>
+
+            <div class=" expensive-left-section">
+            <p id = "exratio"> 2</p>
+            </div>
+
+            <div class=" expensive-left-section">
+             <p id = "exratio"> 2</p>
+            </div>
+            
+            <div class="expensive-left-section">
+            <p id = "exratio"> 2</p>
+            </div>
+
+            <div class=" expensive-left-section">
+            <p id = "exratio"> 2</p>
+            </div>
+            
+            <div class=" expensive-left-section">
+            <p id = "exratio"> 2</p>
+            </div>
+
+            <div class=" expensive-left-section">
+            <p id = "exratio"> 2</p>
+            </div>
+            
+            <div class=" expensive-left-section">
+            <p id = "exratio"> 2</p>
+
+
+            </div>
+        </div>
+
+        <div class="expense-inner-section1 main-section thirdSection" data-close="thirdSection">
+            <div class=" expensive-left-section">
+            <p id = "exratio"> 2</p>
+            </div>
+
+            <div class=" expensive-left-section">
+            <p id = "exratio"> 2</p>
+            </div>
+
+            <div class=" expensive-left-section">
+            <p id = "exratio"> 2</p>
+            </div>
+            
+            <div class=" expensive-left-section">
+            <p id = "exratio"> 2</p>
+            </div>
+
+            <div class=" expensive-left-section">
+            <p id = "exratio"> 2</p>
+            </div>
+            
+            <div class=" expensive-left-section">
+            <p id = "exratio"> 2</p>
+            
+            </div>
+
+            <div class=" expensive-left-section">
+            <p id = "exratio"> 2</p>
+            </div>
+            
+            <div class=" expensive-left-section">
+            <p id = "exratio"> 2</p>
+
+            </div>
+        </div>
+
+        <div class="expense-inner-section1 main-section forthSection first-fourth-section" data-close="forthSection">
+            <div class=" expensive-left-section">
+            </div>
+
+            <div class=" expensive-left-section">
+            <p id = "exratio"> 2</p>
+            </div>
+
+
+            <div class=" expensive-left-section">
+            <p id = "exratio"> 2</p>
+            </div>
+            
+            <div class=" expensive-left-section">
+            <p id = "exratio"> 2</p>
+            </div>
+
+            <div class=" expensive-left-section">
+            <p id = "exratio"> 2</p>
+            </div>
+            
+            <div class=" expensive-left-section">
+            <p id = "exratio"> 2</p>
+            </div>
+
+            <div class=" expensive-left-section">
+            <p id = "exratio"> 2</p>
+            </div>
+            
+            <div class=" expensive-left-section">
+            <p id = "exratio"> 2</p>
+
+            </div>
+               <div class=" expensive-left-section">
+            <p id = "exratio"> 2</p>
+
+            </div>
+        </div>
+    </div>
+
+     <div class="row">
+                <div class="main-parameters">
+                    <ul class="parameters">
+                    <!--     <li><button type="button" class="parameter-button">RUPEEVEST RATING ON KEY PARAMETERS</button></li> -->
+                     <li> <a href="#"><button>RUPEEVEST RATING ON KEY PARAMETERS</button></a></li>
+                    
+                    </ul>
+
+                </div>
+        </div>
+
+
+        <div class="row comparison-section">
+            <div class="expense-sec-main-section">
+                <div class=" expensive-sec-section">
+                    <p>Total Return</p>
+                </div>
+
+                <div class=" expensive-sec-section">
+                    <p class="important-text">Consistency of Return</p>
+                </div>
+
+                <div class=" expensive-sec-section">
+                    <p>Risk</p>
+                </div>
+
+                <div class=" expensive-sec-section">
+                    <p class="important-text">Portfolio Attributes</p>
+                </div>
+
+                <div class=" expensive-sec-section">
+                    <p>Cost Factors</p>
+                </div>
+
+                <div class=" expensive-sec-section">
+                    <p class="important-text">Cost Factors</p>
+                </div>
+            </div>
+
+            <div class="expense-inner-section1 comp-main hideSection firstSection" data-close="firstSection">
+                <div class=" expensive-sec-left-section">
+                <p id = "total_return"> </p>
+                </div>
+
+                <div class=" expensive-sec-left-section">
+                <p id = "consistency_of_return"> </p>
+
+                </div>
+
+                <div class=" expensive-sec-left-section">
+                <p id = "risk"> </p>
+                </div>
+
+                <div class=" expensive-sec-left-section">
+                <p id = "cost_factor"> </p>
+                </div>
+
+                <div class=" expensive-sec-left-section">
+                <p id = "portfolio_attributes"> </p>
+                </div>
+
+                <div class=" expensive-sec-left-section">
+                <p id = "risk">2 </p>
+                </div>
+
+            </div>
+
+            <div class="expense-inner-section1 hideSection secondSection" data-close="secondSection">
+                <div class=" expensive-sec-left-section">
+                <p id = "total_return">2 </p>
+                </div>
+
+                <div class=" expensive-sec-left-section">
+                <p id = "total_return"> 2</p>
+                </div>
+
+                <div class=" expensive-sec-left-section">
+                <p id = "total_return">2 </p>
+                </div>
+
+                <div class=" expensive-sec-left-section">
+                <p id = "total_return">2 </p>
+                </div>
+
+                <div class=" expensive-sec-left-section">
+                <p id = "total_return">2 </p>
+                </div>
+
+                <div class=" expensive-sec-left-section">
+                <p id = "total_return"> </p>
+                </div>
+
+            </div>
+
+            <div class="expense-inner-section1 main-section thirdSection" data-close="thirdSection">
+                <div class=" expensive-sec-left-section">
+                <p id = "total_return">2 </p>
+                </div>
+
+                <div class=" expensive-sec-left-section">
+                <p id = "total_return"> 2</p>
+                </div>
+
+                <div class=" expensive-sec-left-section">
+                <p id = "total_return">2 </p>
+                </div>
+
+                <div class=" expensive-sec-left-section">
+                <p id = "total_return">2 </p>
+                </div>
+
+                <div class=" expensive-sec-left-section">
+                <p id = "total_return">2 </p>
+                </div>
+
+                <div class=" expensive-sec-left-section">
+                <p id = "total_return"> 2</p>
+                </div>
+
+            </div>
+
+            <div class="expense-inner-section1 main-section forthSection" data-close="forthSection">
+                <div class=" expensive-sec-left-section">
+                </div>
+
+                <div class=" expensive-sec-left-section">
+                </div>
+
+                <div class=" expensive-sec-left-section">
+                </div>
+
+                <div class=" expensive-sec-left-section">
+                </div>
+
+                <div class=" expensive-sec-left-section">
+                </div>
+
+                <div class=" expensive-sec-left-section">
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- middle section starts here -->
+            <div class="row">
+                <div class="main-parameters">
+                    <ul class="parameters">
+                     <!--    <li><button type="button" class="parameter-button">RISK AND RETURN PARAMETERS</button></li> -->
+                        <!-- <div> -->
+   <li> <a href="#"><button>RISK AND RETURN PARAMETERS</button></a></li>
+<!-- </div> -->
+                        <li>6m</li>
+                        <li>1y</li>
+                        <li>2y</li>
+                        <li>3y</li>
+                        <li>5y</li>
+                        <li>10y</li>
+                    </ul>
+
+                </div>
+            </div>
+
+                <div class="row comparison-section">
+                    <div class="expense-sec-main-section">
+                        <div class=" parameter-active">
+                            <p class="important-text">Return</p>
+                        </div>
+
+                        <div class=" parameter-active">
+                            <p>Alpha</p>
+                        </div>
+
+                         <div class=" parameter-active">
+                            <p class="important-text">Std Dev</p>
+                        </div>
+
+                        <div class=" parameter-active">
+                            <p>Sharpe</p>
+                        </div>
+                         <div class=" parameter-active">
+                            <p class="important-text">Sortino</p>
+                        </div>
+
+                        <div class=" parameter-active">
+                            <p>Beta</p>
+                        </div>
+                    </div>
+
+                    <div class="expense-inner-section1 comp-main hideSection firstSection" data-close="firstSection">
+                        <div class=" para-sec-section">
+                        <p id = "jalpha_x"> </p>
+                        </div>
+
+                        <div class=" para-sec-section">
+                        <p id = "jalpha_y"> 2</p>
+                        </div>
+
+                        <div class=" para-sec-section">
+                         <p id = "sd_x"> </p>
+                        </div>
+                        
+                        <div class=" para-sec-section one-more-section">
+                        <p id = "sharpe_x"> </p>
+                        </div>
+
+                        <div class=" para-sec-section">
+                        <p id = "sortino_x"> </p>
+                        </div>
+                        
+                        <div class=" para-sec-section">
+                        <p id = "beta_x"> </p>
+                        </div>
+                    </div>
+
+                  
+                    <div class="expense-inner-section1 hideSection secondSection" data-close="secondSection">
+                        <div class=" para-sec-section">
+                        <p id = "jalpha_x1">2 </p>
+                        </div>
+
+                        <div class=" para-sec-section">
+                        <p id = "jalpha_y1">2 </p>
+                        </div>
+
+                        <div class=" para-sec-section">
+                        <p id = "sd_x1">2 </p>
+                        </div>
+                        
+                        <div class=" para-sec-section">
+                        <p id = "sharpe_x1"> 2</p>
+                        </div>
+
+
+                        <div class=" para-sec-section">
+                        <p id = "sortino_x1"> 2</p>
+                        </div>
+
+                        
+                        <div class=" para-sec-section">
+                        <p id = "beta_x1"> 2</p>
+                        </div>
+                    </div>
+
+                    <div class="expense-inner-section1 main-section thirdSection" data-close="thirdSection">
+                        <div class=" para-sec-section">
+                        <p id = "jalpha_x2">2 </p>
+                        </div>
+
+                        <div class=" para-sec-section">
+                        <p id = "jalpha_y2">2 </p>
+                        </div>
+
+                        <div class=" para-sec-section">
+                        <p id = "sd_x2"> 2</p>
+                        </div>
+                        
+                       
+                        <div class=" para-sec-section">
+                        <p id = "sharpe_x2"> 2</p>
+                        </div>
+
+                        <div class=" para-sec-section">
+                        <p id = "sortino_x2">2 </p>
+                        </div>
+                        
+                        <div class=" para-sec-section">
+                        <p id = "beta_x2"> 2</p>
+                        </div>
+                    </div>
+
+                    <div class="expense-inner-section1 main-section forthSection" data-close="forthSection">
+                        <div class=" para-sec-section">
+                        <p id = "jalpha_x3"> 2</p>
+                        </div>
+
+
+                        <div class=" para-sec-section">
+                        <p id = "jalpha_y3">2 </p>
+                        </div>
+
+                        <div class=" para-sec-section">
+                        <p id = "sd_x3">2 </p>
+                        </div>
+                        
+                        
+                        <div class=" para-sec-section">
+                        <p id = "sharpe_x3">2 </p>
+                        </div>
+
+                        <div class=" para-sec-section">
+                        <p id = "sortino_x3"> 2</p>
+                        </div>
+                        
+                        <div class=" para-sec-section">
+                        <p id = "beta_x3"> 2</p>
+                        </div>
+                    </div>
+
+                   
+                </div>
+
+            <div class="row">
+                <div class="main-parameters">
+                    <ul class="parameters">
+                    <!--     <li><button type="button" class="parameter-button">CONCENTRATION AND VALUATION</button></li> -->
+                      <li> <a href="#"><button>CONCENTRATION AND VALUATION</button></a></li>
+                    
+                    </ul>
+
+                </div>
+            </div>
+
+             <div class="row comparison-section">
+                    <div class="expense-sec-main-section">
+                        <div class=" parameter-sec-active">
+                            <p>Number of Stocks</p>
+                        </div>
+
+                        <div class=" parameter-sec-active">
+                            <p class="important-text">Top 10 Stocks(%)</p>
+                        </div>
+
+                         <div class=" parameter-sec-active">
+                            <p>Top 5 Stocks(%)</p>
+                        </div>
+
+                        <div class=" parameter-sec-active">
+                            <p class="important-text">Top 3 Sectors(%)</p>
+                        </div>
+                         <div class=" parameter-sec-active">
+                            <p>Portfolio P/B Ratio</p>
+                        </div>
+
+                        <div class=" parameter-sec-active">
+                            <p class="important-text">Portfolio P/E Ratio</p>
+                        </div>
+                    </div>
+
+                    <div class="expense-inner-section1 comp-main hideSection firstSection" data-close="firstSection">
+                        <div class=" para-sec-left-section">
+                        <p id = "sharpe">2 </p>
+                        </div>
+
+                        <div class=" para-sec-left-section">
+                        <p id = "she"> 2</p>
+                        </div>
+
+                        <div class=" para-sec-left-section">
+                        <p id = "shae">2 </p>
+                        </div>
+                        
+                        <div class=" para-sec-left-section">
+                        <p id = "share">2 </p>
+                        </div>
+
+                        <div class=" para-sec-left-section">
+                        <p id = "shar"> 2</p>
+                        </div>
+                        
+                        <div class=" para-sec-left-section">
+                        <p id = "sharp">2 </p>
+                        </div>
+                    </div>
+
+                    <div class="expense-inner-section1 hideSection secondSection" data-close="secondSection">
+                        <div class=" para-sec-left-section">
+                        <p id = "sharpe_x">2 </p>
+                        </div>
+
+                        <div class=" para-sec-left-section">
+                        <p id = "sharpe_x">2 </p>
+                        </div>
+
+                        <div class=" para-sec-left-section">
+                        <p id = "sharpe_x">2</p>
+                        </div>
+                        
+                        <div class=" para-sec-left-section">
+                        <p id = "sharpe_x">2 </p>
+                        </div>
+
+                        <div class=" para-sec-left-section">
+                        <p id = "sharpe_x"> 2</p>
+                        </div>
+                        
+                        <div class=" para-sec-left-section">
+                        <p id = "sharpe_x"> 2</p>
+                        </div>
+                    </div>
+
+                    <div class="expense-inner-section1 main-section thirdSection" data-close="thirdSection">
+                        <div class=" para-sec-left-section">
+                        <p id = "sharpe"> 5</p>
+                        </div>
+
+                        <div class=" para-sec-left-section">
+                        <p id = "sharp"> 5</p>
+                        </div>
+
+                        <div class=" para-sec-left-section">
+                        <p id = "shar">5 </p>
+                        </div>
+                        
+                        <div class=" para-sec-left-section">
+                        <p id = "sharp"> 5</p>
+                        </div>
+
+                        <div class=" para-sec-left-section">
+                        <p id = "sharpe_x">5 </p>
+                        </div>
+                        
+                        <div class=" para-sec-left-section">
+                        <p id = "sharx"> 4</p>
+                        </div>
+                    </div>
+
+                    <div class="expense-inner-section1 main-section forthSection" data-close="forthSection">
+                        <div class=" para-sec-left-section">
+                        <p id = "sharpe"> 2</p>
+                        </div>
+
+                        <div class=" para-sec-left-section">
+                        <p id = "shar"> 2</p>
+                        </div>
+
+                        <div class=" para-sec-left-section">
+                        <p id = "shar">4 </p>
+                        </div>
+                        
+                        <div class=" para-sec-left-section">
+                        <p id = "sharp"> 4</p>
+                        </div>
+
+                        <div class=" para-sec-left-section">
+                        <p id = "sharp">4 </p>
+                        </div>
+                        
+                        <div class=" para-sec-left-section">
+                        <p id = "sharpe">4 </p>
+
+
+
+
+
+
+                        </div>
+                    </div>
+
+        </div>
+                <!-- middle section ends here -->
+
+                 <!--  bottom section starts here -->
+            <div class="row">
+                <div class="main-parameters">
+                    <ul class="parameters">
+                       <!--  <li><button type="button" class="parameter-button">PORTFOLIO MARKET CAP</button></li> -->
+                          <li> <a href="#"><button>PORTFOLIO MARKET CAP</button></a></li>
+                    
+                    </ul>
+
+                </div>
+            </div>
+
+
+            <div class="row comparison-section">
+
+                <div class="expense-sec-main-section">
+                    <div class=" average-market-section">
+                        <p class="important-text">Average Market Cap(RsCr)</p>
+                    </div>
+
+                    <div class=" average-market-section">
+                        <p>Large(%)</p>
+                    </div>
+
+                    <div class=" average-market-section">
+                        <p class="important-text">mid(%)</p>
+                    </div>
+
+                    <div class=" average-market-section">
+                        <p>Small(%)</p>
+                    </div>
+                </div>
+
+                <div class="expense-inner-section1 comp-main hideSection firstSection" data-close="firstSection">
+                    <div class=" average-market-left-section">
+                    </div>
+
+                    <div class=" average-market-left-section">
+                    </div>
+
+                    <div class=" average-market-left-section">
+                    </div>
+
+                    <div class=" average-market-left-section">
+                    </div>
+                </div>
+
+                <div class="expense-inner-section1 hideSection secondSection" data-close="secondSection">
+                    <div class=" average-market-left-section">
+                    </div>
+
+                    <div class=" average-market-left-section">
+                    </div>
+
+                    <div class=" average-market-left-section">
+                    </div>
+
+                    <div class=" average-market-left-section">
+                    </div>
+                </div>
+
+                <div class="expense-inner-section1 main-section thirdSection" data-close="thirdSection">
+                    <div class=" average-market-left-section">
+                    </div>
+
+                    <div class=" average-market-left-section">
+                    </div>
+
+                    <div class=" average-market-left-section">
+                    </div>
+
+                    <div class=" average-market-left-section">
+                    </div>
+                </div>
+
+                <div class="expense-inner-section1 main-section forthSection" data-close="forthSection">
+                    <div class=" average-market-left-section">
+                    </div>
+
+                    <div class=" average-market-left-section">
+                    </div>
+
+                    <div class=" average-market-left-section">
+                    </div>
+
+                    <div class=" average-market-left-section">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="main-parameters">
+                    <ul class="parameters">
+                     <!--    <li><button type="button" class="parameter-button">PORTFOLIO MARKET CAP</button></li> -->
+                     <li> <a href="#"><button>PORTFOLIO HOLDINGS</button></a></li>
+                        <li>Top 10 Holdings</li>
+                    
+                    </ul>
+
+                </div>
+            </div>
+
+
+            <div class="row comparison-section">
+                <div class="expense-sec-main-section">
+                    <div class=" average-market-sec-section">
+                    </div>
+
+                    <div class=" average-market-sec-section">
+                    </div>
+
+                    <div class=" average-market-sec-section">
+                    </div>
+
+                    <div class=" average-market-sec-section">
+                    </div>
+                </div>
+
+                <div class="expense-inner-section1 comp-main hideSection firstSection" data-close="firstSection">
+                    <div class=" average-market-sec-left-section">
+                        <p>Infosys 11%</p>
+                    </div>
+
+                    <div class=" average-market-sec-left-section">
+                        <p>Data Steel 8%</p>
+                    </div>
+
+                    <div class=" average-market-sec-left-section1">
+                      
+                    </div>
+
+                    <div class=" average-market-sec-left-section2">
+                     
+                    </div>
+                </div>
+
+                  <div class="expense-inner-section1 hideSection secondSection" data-close="secondSection">
+                    <div class=" average-market-sec-left-section">
+                        <p>Wipro 13%</p>
+                    </div>
+
+                    <div class=" average-market-sec-left-section">
+                        <p>Titan 8%</p>
+                    </div>
+
+                    <div class=" average-market-sec-left-section1">
+                      
+                    </div>
+
+                    <div class=" average-market-sec-left-section2">
+                     
+                    </div>
+                </div>
+
+                <div class="expense-inner-section1 main-section thirdSection" data-close="thirdSection">
+                    <div class=" average-market-sec-left-section">
+                        <p>Infosys 11%</p>
+                    </div>
+
+                    <div class=" average-market-sec-left-section">
+                        <p>Data Steel 8%</p>
+                    </div>
+
+                    <div class=" average-market-sec-left-section1">
+                      
+                    </div>
+
+                    <div class=" average-market-sec-left-section2">
+                     
+                    </div>
+                </div>
+
+                <div class="expense-inner-section1 main-section forthSection" data-close="forthSection">
+                    <div class=" average-market-sec-left-section">
+                        <p>Wipro 13%</p>
+                    </div>
+
+                    <div class=" average-market-sec-left-section">
+                        <p>Titan 8%</p>
+                    </div>
+
+                    <div class=" average-market-sec-left-section1">
+                      
+                    </div>
+
+                    <div class=" average-market-sec-left-section2">
+                     
+                    </div>
+                </div>
+            </div>
+
+                <!--  bottom section ends here -->
+
+
+
+
+        </div>
+</div>
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %> 
+<%= javascript_include_tag "js/comparison.js" %>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery-2.2.3.js"></script>
+
+<!-- <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+<script type="text/javascript">
+// $(".close-image").click(function() {
+//     $(this).parent().hide();
+// });
+
+// $("#toggle-content").click(function() {
+//     $(".content").slideToggle();
+// })
+var dataAttr;
+$('.close-image').click(function (){
+dataAttr=$(this).parent('.main-section').data('close');
+console.log(dataAttr);
+console.log($('.'+dataAttr).data('close')===dataAttr);
+
+    if($('.'+dataAttr).data('close')===dataAttr){
+        // //alert();
+         $('.'+dataAttr).hide();
+
+    }
+});
+</script>
+
+
+
+</body>
+</html>

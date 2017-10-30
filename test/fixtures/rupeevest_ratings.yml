@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schemecode: 1
+  total_return: 9.99
+  consistency_of_return: 9.99
+  risk: 9.99
+  cost_factor: 9.99
+  portfolio_attributes: 9.99
+  rupeevest_rating: 9.99
+
+two:
+  schemecode: 1
+  total_return: 9.99
+  consistency_of_return: 9.99
+  risk: 9.99
+  cost_factor: 9.99
+  portfolio_attributes: 9.99
+  rupeevest_rating: 9.99

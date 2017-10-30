@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SnapShot</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/star-rating.css"> 
+    <link rel="stylesheet" type="text/css" href="stylesheets/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" href="stylesheets/css/font-awesome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script>
+    $(document).ready(function(){
+
+        $(".Concentration").show();
+        $(".Portfolio").hide();
+        $("#regular").css({"color":"red"});       
+    $("#regular").click(function(){
+                $(".Portfolio").hide();
+                $(".Concentration").show();
+                $("#regular").css({"color":"red"});
+                $("#direct").css({"color":"black"});
+    });
+           $("#direct").click(function(){
+            $(".Portfolio").show();
+            $(".Concentration").hide();
+            $("#direct").css({"color":"red"});
+            $("#regular").css({"color":"black"});
+ 
+    });
+});
+</script>
+</head>
+<body>
+
+
+<header id="header">
+
+        <div class="row">
+          <div class="col-xs-12 header">
+<div id="main-header-wrapper" class="main_header">
+    <div class="col-xs-12 fixed-header">
+
+        <div class="col-xs-12 col-sm-3 rupeevest-logo">
+            <img src="images/logo-img.png">
+        </div>
+
+        <div class="col-xs-12 col-sm-6 search-button rupeevest-search-button">
+                <div class="input-group latest-search-button">
+                    <input type="text" id ="fund_names" class="form-control " placeholder="Search for...">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default " type="button" onclick="setvalue_schemename()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                      </span>
+                </div><!-- /input-group -->
+
+        </div>
+
+            <div class="col-xs-12 col-sm-3 header-buttons login-signup-buttons">
+                <ul>
+                    <li><a href=""><button class="button button5">Login</button></a></li>
+                    <li><a href=""><button class="button button5">Signup</button></a></li>
+                </ul>
+            </div>
+        
+
+    </div>
+</div>
+</div>
+        </div>
+        <div class="row top-margin-one second-top">
+            <div class="col-md-4">
+                <p id ="scheme_name">HDFC TOP 200 FUND - G</p>
+                <p ><span id="fund_manager"></span> | <span id="eqty_class"></span> | <span id="index_type"></span> Kenneth Andrade| Equity: Large Cap | S&P BSE 500</p>
+            </div>
+            <div class="col-md-4 star">
+                <fieldset class="rating">
+                    <input type="radio" id="star5" name="rating" value="5"/><label class="full" for="star5"
+                                                                                   title="Awesome - 5 stars"></label>
+                    <input type="radio" id="star4half" name="rating" value="4 and a half"/><label class="half"
+                                                                                                  for="star4half"
+                                                                                                  title="Pretty good - 4.5 stars"></label>
+                    <input type="radio" id="star4" name="rating" value="4"/><label class="full" for="star4"
+                                                                                   title="Pretty good - 4 stars"></label>
+                    <input type="radio" id="star3half" name="rating" value="3 and a half"/><label class="half"
+                                                                                                  for="star3half"
+                                                                                                  title="Meh - 3.5 stars"></label>
+                    <input type="radio" id="star3" name="rating" value="3"/><label class="full" for="star3"
+                                                                                   title="Meh - 3 stars"></label>
+                    <input type="radio" id="star2half" name="rating" value="2 and a half"/><label class="half"
+                                                                                                  for="star2half"
+                                                                                                  title="Kinda bad - 2.5 stars"></label>
+                    <input type="radio" id="star2" name="rating" value="2"/><label class="full" for="star2"
+                                                                                   title="Kinda bad - 2 stars"></label>
+                    <input type="radio" id="star1half" name="rating" value="1 and a half"/><label class="half"
+                                                                                                  for="star1half"
+                                                                                                  title="Meh - 1.5 stars"></label>
+                    <input type="radio" id="star1" name="rating" value="1"/><label class="full" for="star1"
+                                                                                   title="Sucks big time - 1 star"></label>
+                    <input type="radio" id="starhalf" name="rating" value="half"/><label class="half" for="starhalf"
+                                                                                         title="Sucks big time - 0.5 stars"></label>
+                </fieldset>
+            </div>
+            <button type="button" class="btn btn-default pull-right star">INVEST NOW</button>
+        </div>
+    </div>
+</header>
+<section id="top">
+    <div class="container">
+        <div class="row">
+            <div class="pull-left">
+                <p class="line">
+                    Plan: <span class="color-changes regular" id="regular"> Regular</span> | <span id="direct" class="color-changes direct">Direct </span>&nbsp; &nbsp; &nbsp; &nbsp;<span class="">Growth plan Nav:</span><span class="red-color">10.34</span> | <span id="dividend">Dividend plan </span> <span class="red-color">Nav:7.65</span></a>
+                </p>
+            </div>
+            <div class="pull-right">
+                <p class="line" >
+                    <span id="type">Status : Open for subscription</span><!-- <span> &nbsp; &nbsp; Compare</span> -->
+                    <button type="text" class="compare-button">compare</button>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-6 border-right">
+                        <p class="text-center" id="navrs">10.34 <span class="red-color" id="navchange">-0.8%</span></p>
+                        <p id="navdate">Nav as on Jan 14th 2016</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="text-first-center" id="aum">275.09</p>
+                        <h5 class="text-inner-center">AUM (cr)</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="line">Fund House : <a href="" class="hdfc-text">HDFC </a></p>
+                </div>
+            </div>
+            <div class="col-md-8 expense-section">
+                <div class="row divide">
+                    <div class="col-md-3">
+                        <div class="box">
+                            <p class="center-block-one box-title">Expense (%)</p>
+                            <p class="center-block-one" id = "expense">2.82</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="box">
+                            <p class="center-block-one box-title">Turnover Ratio</p>
+                            <h5 class="center-block-one" id = "turn"> </h5>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                       <div class="box">
+                            <p class="center-block-one box-title">Exit Load (%)</p>
+                            <p class="center-block-one" id = "exitload">2.82</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="box">
+                            <p class="center-block-one box-title">Lock-in-Period</p>
+                            <p class="center-block-one" id="lockperiod">0D</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                       <div class="box">
+                            <p class="center-block-one box-title">Inception</p>
+                            <p class="center-block-one" id = "incdate">April 15th 2013</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                       <div class="box">
+                            <p class="center-block-one box-title">Return since inception</p>
+                            <h5 class="center-block-one" id="incep"></h5>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                       <div class="box">
+                            <p class="center-block-one box-title">Minimum Investment</p>
+                            <p class="center-block-one" id="inv">Lumpsum/SIP</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                       <div class="box">
+                            <p class="center-block-one box-title">Redemption Period(days)</p>
+                            <p class="center-block-one" id="redem_period">10</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" margin-right">
+                <div class="box">
+                    <p class="center-block-one box-title">Total Return</p>
+                    <p class="center-block-one">5</p>
+                </div>
+            </div>
+            <div class=" margin-right">
+                <div class="box">
+                    <p class="center-block-one box-title">Consistency of Return</p>
+                    <p class="center-block-one">1</p>
+                </div>
+            </div>
+            <div class=" margin-right">
+                <div class="box">
+                    <p class="center-block-one box-title">Risk</p>
+                    <p class="center-block-one">5</p>
+                </div>
+            </div>
+            <div class=" margin-right">
+                <div class="box">
+                    <p class="center-block-one box-title">PortFolio Attributes</p>
+                    <p class="center-block-one">3</p>
+                </div>
+            </div>
+            <div class=" margin-right">
+                <div class="box">
+                    <p class="center-block-one box-title">Cost Factors</p>
+                    <p class="center-block-one">5</p>
+                </div>
+            </div>
+        </div>
+        <p class="denotes-para">*5 denotes the best within its category.1 denotes the worst within its category.</p>
+    </div>
+</section>
+<section id="tab">
+    <div class="container">
+        <div class="row">
+            <div class="bs-example">
+
+            <div class="col-xs-12 snapshot-main-section">
+                <div class="col-xs-12 col-sm-4 snapshot snapshot-section">
+                <a data-toggle="tab" href="#sectionA">Snapshot</a>
+                </div>
+
+                 <div class="col-xs-12 col-sm-4 portfolio snapshot-section">
+                 <a data-toggle="tab" href="#sectionB">Portfolio</a>
+                </div>
+
+                 <div class="col-xs-12 col-sm-4 download-report snapshot-section">
+                 <a data-toggle="tab" href="#sectionC">Download Report</a>
+                </div>
+            </div>
+                <div class="tab-content">
+                    <div id="sectionA" class="tab-pane fade in active">
+                        <div class="row">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8 nav-movement-text">
+                             <h2>
+                                NAV MOVEMENT
+                            </h2>
+                            <p>
+                                NAV movement shows NAV and index price of HDFC top 200 fund-G since inception. The
+                                scrollbar at the bottom
+                                allows user to select range in the in whishes to view the plot.
+                            </p>
+
+                            <ul class="movement-numbers">
+                                <li>1m</li>
+                                <li>3m</li>
+                                <li>6m</li>
+                                <li>YTD</li>
+                                <li>1y</li>
+                                <li>2y</li>
+                                <li>3y</li>
+                                <li>5y</li>
+                                <li>All</li>
+                                <li>From<input type="box"></li>
+                                <li>to<input type="box"></li>
+                            </ul>
+                                <div id="container" style="height: 400px; min-width: 310px"></div>
+                            </div>
+                            <div class="col-md-4 asset-allocation">
+                                <h4>Asset Allocation (%)</h4>
+                             
+                                <div id="container-7" style="width: 300px; height: 250px; margin: 0 auto"></div>
+                                  <div id="table" class="Concentration">
+                                        <table class="table table-responsive" id="mfreturn">
+                                            <thead class="border-top">
+                                        <tr>
+                                            <th>Concentration & Valuation </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="">
+                                            <td>Number Of stocks</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Top 10 stocks (%)</td>
+                                        </tr>
+                                        <tr class="">
+                                            <td>Top 10 stocks (%)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Top 10 stocks (%)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Top 10 stocks (%)</td>             
+                                        </tr>
+
+                                        </tbody>                                           
+                                        </table>
+                                    </div>
+                                    <div id="table" class="Portfolio">
+                                        <table class="table table-responsive" id="mfreturn">
+                                            <thead class="border-top">
+                                        <tr>
+                                            <th>Portfolio Characteristics </th>
+                                            <th>Fund</th>
+                                            <th>Category Average</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="">
+                                            <td> Number of Securities</td>
+                                            <td>114</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Modified Duration (yrs) </td>
+                                            <td>060</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="">
+                                            <td>Average Maturity (yrs)</td>
+                                            <td>0.58</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Yield to Maturity (%)</td>
+                                            <td>7.84</td>
+                                            <td></td>
+                                        </tr>
+                                     
+
+                                        </tbody>                                           
+                                        </table>
+                                    </div>
+                            </div>
+                       
+
+                        <div class="col-xs-12">
+                 <!--        </div> -->
+                        <div class="row top-margin portfolioContent">
+                            <div class="col-md-7 left-portfolio-text">
+                                <div class="row total-border ">
+                                    <div id="table">
+                                        <table class="table table-responsive" id="mfreturn">
+                                            <thead class="border-top">
+                                        <tr>
+                                            <th>Return(%)</th>
+                                            <th>YTD</th>
+                                            <th>1month</th>
+                                            <th>3month</th>
+                                             <th>1year</th>
+                                            <th>3year</th>
+                                            <th>5year</th>
+                                            <th>10year</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="active">
+                                            <td>Fund<br></td>
+                                            <td>-9.09</td>
+                                            <td>-7.18</td>
+                                            <td>-5.67</td>
+                                            <td>2.45</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>S&P BSE 500<br></td>
+                                            <td>-7.21</td>
+                                            <td>-6.27</td>
+                                            <td>-9.13</td>
+                                            <td>-13.74</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="active">
+                                            <td>Category Average<br></td>
+                                            <td>-8.48</td>
+                                            <td>-7.92</td>
+                                            <td>-6.22</td>
+                                            <td>-2.23</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rank within category<br></td>
+                                            <td>25</td>
+                                            <td>17</td>
+                                            <td>18</td>
+                                            <td>6</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="active">
+                                            <td>Number of funds in category<br></td>
+                                            <td>42</td>
+                                            <td>42</td>
+                                            <td>36</td>
+                                            <td>32</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                           <tr>
+                                            <td> As on April xyz<br></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        </tbody>                                           
+                                        </table>
+                                    </div>
+                                </div>
+
+
+                                   <div class="row total-border second-table">
+                                    <div id="table">
+                                        <table class="table table-responsive" id="mfreturn">
+                                            <thead class="border-top">
+                                        <tr>
+                                            <th>Risk Measures</th>
+                                            <th>Std Dev</th>
+                                            <th>Sharpe</th>
+                                            <th>Sotino</th>
+                                             <th>Beta</th>
+                                            <th>Alpha</th>
+                                            <th>Treynor<br>Ratio</th>
+                                            <th>Information<br>Ratio</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="active">
+                                            <td>Fund<br></td>
+                                            <td>17.24</td>
+                                            <td>0.39</td>
+                                            <td>0.80</td>
+                                            <td>1.19</td>
+                                            <td>1.85</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>S&P BSE 500<br></td>
+                                            <td>17.24</td>
+                                            <td>0.39</td>
+                                            <td>0.80</td>
+                                            <td>1.19</td>
+                                            <td>1.85</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="active">
+                                            <td>Category Average<br></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rank within category<br></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="active">
+                                            <td>Number of funds in category<br></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td> As on Dec xyz<br></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+
+                                        </tbody>                                           
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="row left-margin total-border">
+                                    <h5 style="font-weight: 600;">Portfolio Holdings</h5>
+                                    <table class="table table-responsive" id="portfolio_holdings">
+                                        <thead class="border-top">
+                                        <tr>
+                                            <th>Security Name</th>
+                                            <th>Sector</th>
+                                            <th>Credit Rating</th>
+                                            <th>Weight (%)</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="active">
+                                            <td><br></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><br></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="active">
+                                            <td><br></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><br></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                         <tr class="active">
+                                            <td><br></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <center><div class="portfolioPagination"><span class="previous"><i class="glyphicon glyphicon-triangle-left"></i>&nbsp;&nbsp;Previous</span> | 
+                                    <span class="next">Next&nbsp;&nbsp;<i class="glyphicon glyphicon-triangle-right"></i></span></div></center>
+                                </div>
+                                <div class="row left-margin total-border margin-top">
+                                    <h5 style="font-weight: 600;">Dividend Action</h5>
+                                    <table class="table table-responsive" id="dividend_data">
+                                        <thead class="border-top">
+                                        <tr>
+                                            <th>Plan</th>
+                                            <th>Record Date</th>
+                                            <th>Dividend ( Rs/ Unit )</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="active">
+                                            <td>Dividend</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><br></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="active">
+                                            <td><br></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><br></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                         <tr class="active">
+                                            <td><br></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        </div>
+                
+                        <div class="row  portfolioContent1">
+                            <h3 class="border">
+                                Peer Comparison
+                            </h3>
+                            <div id="table">
+                                <table class="table table-responsive" id="peertbl">
+                                   
+                                    <tbody>
+                                    <tr class="active">
+                                        <td>HDFC Top 200 Fund</td>
+                                        <td>Rupeevest<br>Rating</td>
+                                        <td>AUM<br>(In crores)</td>
+                                        <td>YTD</td>
+                                        <td>1month</td>
+                                        <td>3month</td>
+                                        <td>1year</td>
+                                        <td>3year</td>
+                                        <td>5year</td>
+                                        <td>10year</td>
+                                        <td>Expense<br>Ratio(%)</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><br></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="active">
+                                        <td><br></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><br></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h3 class="border">
+                                Return ( % )
+                            </h3>
+                        </div>
+                        <div class="row  portfolioContent1">
+                            <div class="row chart">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <a class="active">Annual Returns</a>
+                                    <a>Quarterly Returns</a>
+                                    <a>Monthly Returns</a>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                            <div id="container-6" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                            <hr>
+                            <div id="table">
+                                <table class="table table-responsive">
+                                    <thead>
+                                    <tr>
+                                        <th>Historical Performance</th>
+                                        <th>2005</th>
+                                        <th>2006</th>
+                                        <th>2007</th>
+                                        <th>2008</th>
+                                        <th>2009</th>
+                                        <th>2010</th>
+                                        <th>2011</th>
+                                        <th>2012</th>
+                                        <th>2013</th>
+                                        <th>2014</th>
+                                        <th>2015</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="active">
+                                        <td>HDFC Top 200 Fund Growth</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Category( Equity: Large Cap)</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="active">
+                                        <td>+ / - Category ( Equity: Large Cap)</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rank</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p>HDFC Top 200 Fund growth return as of 12/31/2015</p>
+                                <hr>
+                            </div>
+                            <div id="table">
+                                <table class="table table-responsive">
+                                    <thead>
+                                    <tr>
+                                        <th>Recent Fund Updates</th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="active">
+                                        <td>Interview the marathon man | December 1 2015</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><br></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="active">
+                                        <td><br></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><br></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sectionB" class="tab-pane fade">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div id="container-1" style="min-width: 50%; height: 400px; margin: 0 auto"></div>
+                            </div>
+                            <div class="col-md-4">
+                                <table class="table table-responsive">
+                                    <thead>
+                                    <tr>
+                                        <th>Portfolio Market Cap</th>
+                                        <th>Fund</th>
+                                        <th>Category Average</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="active">
+                                        <td>Average Market Cap (Rs Cr)</td>
+                                        <td>13,726</td>
+                                        <td>13,726</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Large (%)</td>
+                                        <td>13,726</td>
+                                        <td>13,726</td>
+                                    </tr>
+                                    <tr class="active">
+                                        <td>Mid (%)</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Small(%)</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sectionC" class="tab-pane fade">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!--<%= javascript_include_tag "application", "data-turbolinks-track" => true %> -->
+<!-- <script src="javascripts/ui/highcharts.js"></script>
+<script src="javascripts/ui/highcharts-3d.js"></script>
+<script src="javascripts/ui/highstock.js"></script>
+<script src="javascripts/ui/exporting.js"></script> -->
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %> 
+<h1>dsfdsf</h1>
+<!--  <script src="../javascripts/ui/highcharts.js"></script>
+<script src="../javascripts/ui/highcharts-3d.js"></script>
+<script src="../javascripts/ui/highstock.js"></script>
+<script src="../javascripts/ui/exporting.js"></script> -->
+  <%= javascript_include_tag "ui/highcharts.js" %>
+
+<script type="text/javascript">
+$(function () {
+    // Set up the chart
+    var chart = new Highcharts.Chart({
+    //$('#container').highcharts({
+        chart: {
+            renderTo: 'container-1',
+            type: 'column',
+            options3d: {
+                enabled: true,
+                alpha: 0,
+                beta: 15,
+                depth: 0,
+                viewDistance: 50
+            }
+        },
+        title: {
+            text: 'Section Allocation v/s Benchmark'
+        },
+        subtitle: {
+            text: ''
+        },
+                        xAxis: {
+                    categories: ['Financial', 'Energy', 'Technology', 'Automobile', 'Diversified', 'Engineering', 'Healthcare', 'FMCG', 'Metals', 'Services', 'Communication', 'Chemicals','Construction']
+                },
+        yAxis: {
+                    title: {
+                        text: 'Assets ( % )'
+                    },
+                     min: 0,
+                     max: 70,
+                     tickInterval: 10
+        },
+        exporting: { enabled: false },
+        plotOptions: {
+            column: {
+                depth: 45
+            }
+        },
+        series: [{
+            name: 'HDFC Top 200 Fund',
+            data: [30, 10, 20, 30, 30, 10, 20, 30, 30, 10, 20, 30, 50]
+        },{
+            name: 'S&P BSE 200',
+            data: [30, 20, 40, 30, 10, 10, 60, 30, 10, 10, 20, 30, 40]
+        }]
+    });
+});
+
+
+
+
+    $(function () {
+            $('#container-6').highcharts({
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: ''
+                },
+                exporting: { enabled: false },
+                xAxis: {
+                    categories: ['2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015']
+                },
+                yAxis: {
+                    title: {
+                        text: 'Returns ( % )'
+                    },
+                    categories: ['-100', '-50', '0', '50', '100', '150']
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'HDFC Top 200 Fund',
+                    data: [30, 60, 40, 52, -45, 90, 25, -30, 35, 5, 45, -5]
+                }, {
+                    name: 'S&P BSE 200',
+                    data: [20, 35, 40, 55, -55, 80, 20, -25, 30, 7, 40, -2]
+                }, {
+                    name: 'Equity: Large Cap',
+                    data: [15, 40, 40, 50, -50, 70, 20, -28, 28, 9, 30, -1]
+                }]
+            });
+            
+        $('#container-7').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: 0,
+                plotShadow: false
+            },
+            title: {
+                text: 'EQUITY - 70<br>DEBT - 20<br>CASH - 10',
+                align: 'center',
+                verticalAlign: 'middle',
+                                        style: {
+                            fontWeight: 'normal',
+                            color: '#000'
+                        },
+                margin:50,
+                x: 0,
+                y: -15
+            },
+            exporting: { enabled: false },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        enabled: false,
+                        distance: -50,
+                        style: {
+                            fontWeight: 'bold',
+                            color: 'white'
+                        }
+                    },
+                    startAngle: -180,
+                    endAngle: 180,
+                    center: ['50%', '50%']
+                }
+            },
+            credits: {
+                    enabled: false
+                },
+            series: [{
+                type: 'pie',
+                name: 'Asset Allocation',
+                innerSize: '75%',
+                data: [
+                    ['EQUITY', 70],
+                    ['DEBT', 20],
+                    ['CASH', 10],
+                    {
+                        name: 'Proprietary or Undetectable',
+                        y: 0.4,
+                        dataLabels: {
+                            enabled: false
+                        }
+                    }
+                ]
+            }]
+        });
+        
+    });
+    
+    
+$(function () {
+    var seriesOptions = [],
+        seriesCounter = 0,
+        names = ['HDFC Top Fund 200 G', 'S&P BSE 200', 'Equity: Large Cap'];
+
+    /**
+     * Create the chart when all data is loaded
+     * @returns {undefined}
+     */
+    function createChart() {
+
+        $('#container').highcharts('StockChart', {
+
+            rangeSelector: {
+                selected: 4
+            },
+            credits: {
+                    enabled: false
+                },
+            exporting: { enabled: false },
+            yAxis: {
+                labels: {
+                    formatter: function () {
+                        return (this.value > 0 ? ' + ' : '') + this.value + '%';
+                    }
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 2,
+                    color: 'silver'
+                }]
+            },
+
+            plotOptions: {
+                series: {
+                    compare: 'percent'
+                }
+            },
+
+            tooltip: {
+                pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.change}%)<br/>',
+                valueDecimals: 2
+            },
+
+            series: seriesOptions
+        });
+    }
+
+    $.each(names, function (i, name) {
+
+        $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=' + name.toLowerCase() + '-c.json&callback=?',    function (data) {
+
+            seriesOptions[i] = {
+                name: name,
+                data: data
+            };
+
+            // As we're loading the data asynchronously, we don't know what order it will arrive. So
+            // we keep a counter and create the chart when all the data is loaded.
+            seriesCounter += 1;
+
+            if (seriesCounter === names.length) {
+                createChart();
+            }
+        });
+    });
+}); 
+
+// Data retrieved from http://vikjavev.no/ver/index.php?spenn=2d&sluttid=16.06.2015.
+$(function () {
+    $('#container1').highcharts({
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: ''
+        },
+        subtitle: {
+            text: ''
+        },
+        exporting: { enabled: false },
+        xAxis: {
+            type: 'datetime',
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            minorGridLineWidth: 0,
+            gridLineWidth: 0,
+            alternateGridColor: null,
+            plotBands: [{ // Light air
+                from: 0.3,
+                to: 1.5,
+                color: 'rgba(0, 0, 0, 0)',
+                label: {
+                    text: '',
+                    style: {
+                        //color: '#606060'
+                    }
+                }
+            }, { // Light breeze
+                from: 1.5,
+                to: 3.3,
+                color: 'rgba(0, 0, 0, 0)',
+                label: {
+                    text: '',
+                    style: {
+                        //color: '#606060'
+                    }
+                }
+            }, { // Gentle breeze
+                from: 3.3,
+                to: 5.5,
+                color: 'rgba(0, 0, 0, 0)',
+                label: {
+                    text: '',
+                    style: {
+                        //color: '#606060'
+                    }
+                }
+            }, { // Moderate breeze
+                from: 5.5,
+                to: 8,
+                color: 'rgba(0, 0, 0, 0)',
+                label: {
+                    text: '',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // Fresh breeze
+                from: 8,
+                to: 11,
+                color: 'rgba(0, 0, 0, 0)',
+                label: {
+                    text: '',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // Strong breeze
+                from: 11,
+                to: 14,
+                color: 'rgba(0, 0, 0, 0)',
+                label: {
+                    text: '',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // High wind
+                from: 14,
+                to: 15,
+                color: 'rgba(0, 0, 0, 0)',
+                label: {
+                    text: '',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }]
+        },
+        tooltip: {
+            valueSuffix: ' '
+        },
+        credits: {
+           enabled: false
+        },        
+        plotOptions: {
+            spline: {
+                lineWidth: 4,
+                states: {
+                    hover: {
+                        lineWidth: 5
+                    }
+                },
+                marker: {
+                    enabled: false
+                },
+                pointInterval: 3600000, // one hour
+                pointStart: Date.UTC(2016, 4, 31, 0, 0, 0)
+            }
+        },
+        series: [{
+            name: 'HDFC Top 200 Fund G',
+            data: [0.2, 0.8, 0.8, 0.8, 1, 1.3, 1.5, 2.9, 1.9, 2.6, 1.6, 3, 4, 3.6, 4.5, 4.2, 4.5, 4.5, 4, 3.1, 2.7, 4, 2.7, 2.3, 2.3, 4.1, 7.7, 7.1, 5.6, 6.1, 5.8, 8.6, 7.2, 9, 10.9, 11.5, 11.6, 11.1, 12, 12.3, 10.7, 9.4, 9.8, 9.6, 9.8, 9.5, 8.5, 7.4, 7.6]
+
+        }, {
+            name: 'S&P BSE 200',
+            data: [0, 0, 0.6, 0.9, 0.8, 0.2, 0, 0, 0, 0.1, 0.6, 0.7, 0.8, 0.6, 0.2, 0, 0.1, 0.3, 0.3, 0, 0.1, 0, 0, 0, 0.2, 0.1, 0, 0.3, 0, 0.1, 0.2, 0.1, 0.3, 0.3, 0, 3.1, 3.1, 2.5, 1.5, 1.9, 2.1, 1, 2.3, 1.9, 1.2, 0.7, 1.3, 0.4, 0.3]
+        }, {
+            name: 'Category Average',
+            data: [0, 3, 0.6, 0.9, 0.8, 0.2, 0, 0, 0, 0.2, 0.6, 0.7, 0.8, 0.6, 0.2, 0, 0.2, 0.4, 0.4, 0, 0.2, 0, 0, 0, 0.2, 0.2, 0, 0.4, 0, 0.2, 0.2, 0.2, 0.4, 0.4, 0, 3.1, 3.1, 2.6, 1.5, 1.9, 2.6, 1, 3.5, 1.9, 1.2, 0.7, 1.3, 0.4, 0.4]
+        }],
+        navigation: {
+            menuItemStyle: {
+                fontSize: '10px'
+            }
+        }
+    });
+});
+</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ps_code: 1
+  mcap_company: 9.99
+  classification: MyString
+  remarks1: MyString
+  remarks2: MyString
+  remarks3: MyString
+
+two:
+  ps_code: 1
+  mcap_company: 9.99
+  classification: MyString
+  remarks1: MyString
+  remarks2: MyString
+  remarks3: MyString

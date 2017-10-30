@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type_code: 1
+  type: 
+  upd_flag: MyString
+
+two:
+  type_code: 1
+  type: 
+  upd_flag: MyString

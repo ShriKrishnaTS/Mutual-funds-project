@@ -1,0 +1,2 @@
+module PepbRatioHelper
+end

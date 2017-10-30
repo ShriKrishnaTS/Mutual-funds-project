@@ -1,0 +1,85 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schemecode: 9.99
+  c_date: 2016-02-29 12:48:31
+  p_date: 2016-02-29 12:48:31
+  c_nav: 9.99
+  p_nav: 9.99
+  dyaret_1: 9.99
+  weekdate_1: 2016-02-29 12:48:31
+  weeknav_1: 9.99
+  weekret_1: 9.99
+  mthdate_1: 2016-02-29 12:48:31
+  mthnav_1: 9.99
+  monthret_1: 9.99
+  mthdate_3: 2016-02-29 12:48:31
+  mthnav_3: 9.99
+  monthret_3: 9.99
+  mntdate_6: 2016-02-29 12:48:31
+  mnthnav_6: 9.99
+  monthret_6: 9.99
+  mnthdate_9: 2016-02-29 12:48:31
+  mnthnav_9: 9.99
+  mnthret_9: 9.99
+  yrdate_1: 2016-02-29 12:48:31
+  yrnav_1: 9.99
+  yrret_1: 9.99
+  yrdate_2: 2016-02-29 12:48:31
+  yrnav_2: 9.99
+  yearret_2: 9.99
+  yrdate_3: 2016-02-29 12:48:31
+  yrnav_3: 9.99
+  yearret_3: 9.99
+  yrdate_4: 2016-02-29 12:48:31
+  yrnav_4: 9.99
+  yearret_4: 9.99
+  yrdate_5: 2016-02-29 12:48:31
+  yrnav_5: 9.99
+  yearret_5: 9.99
+  incdate: 2016-02-29 12:48:31
+  incnav: 9.99
+  incret: 9.99
+  upd_flag: MyString
+
+two:
+  schemecode: 9.99
+  c_date: 2016-02-29 12:48:31
+  p_date: 2016-02-29 12:48:31
+  c_nav: 9.99
+  p_nav: 9.99
+  dyaret_1: 9.99
+  weekdate_1: 2016-02-29 12:48:31
+  weeknav_1: 9.99
+  weekret_1: 9.99
+  mthdate_1: 2016-02-29 12:48:31
+  mthnav_1: 9.99
+  monthret_1: 9.99
+  mthdate_3: 2016-02-29 12:48:31
+  mthnav_3: 9.99
+  monthret_3: 9.99
+  mntdate_6: 2016-02-29 12:48:31
+  mnthnav_6: 9.99
+  monthret_6: 9.99
+  mnthdate_9: 2016-02-29 12:48:31
+  mnthnav_9: 9.99
+  mnthret_9: 9.99
+  yrdate_1: 2016-02-29 12:48:31
+  yrnav_1: 9.99
+  yrret_1: 9.99
+  yrdate_2: 2016-02-29 12:48:31
+  yrnav_2: 9.99
+  yearret_2: 9.99
+  yrdate_3: 2016-02-29 12:48:31
+  yrnav_3: 9.99
+  yearret_3: 9.99
+  yrdate_4: 2016-02-29 12:48:31
+  yrnav_4: 9.99
+  yearret_4: 9.99
+  yrdate_5: 2016-02-29 12:48:31
+  yrnav_5: 9.99
+  yearret_5: 9.99
+  incdate: 2016-02-29 12:48:31
+  incnav: 9.99
+  incret: 9.99
+  upd_flag: MyString

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schemecode: 1
+  maturitydate: 2016-02-26 12:29:21
+  tenure_number: 9.99
+  tenure_option: MyString
+  net_inticative_yield1: 9.99
+  net_inticative_yield2: 9.99
+  post_taxyield_ind1: 9.99
+  post_taxyield_ind2: 9.99
+  post_taxyield_nonind1: 9.99
+  post_taxyield_nonind2: 9.99
+  exit_load: MyString
+  upd_flag: MyString
+
+two:
+  schemecode: 1
+  maturitydate: 2016-02-26 12:29:21
+  tenure_number: 9.99
+  tenure_option: MyString
+  net_inticative_yield1: 9.99
+  net_inticative_yield2: 9.99
+  post_taxyield_ind1: 9.99
+  post_taxyield_ind2: 9.99
+  post_taxyield_nonind1: 9.99
+  post_taxyield_nonind2: 9.99
+  exit_load: MyString
+  upd_flag: MyString

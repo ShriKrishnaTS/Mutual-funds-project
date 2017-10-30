@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schemecode: 1
+  amc_code: 1
+  frequency: MyString
+  swp: MyString
+  swpdates: MyString
+  swpdays1: 1
+  swpdays2: 1
+  swpdays3: 1
+  swpdays4: 1
+  swpdays5: 1
+  swpdays6: 1
+  swpdays7: 1
+  swpmininvest: 9.99
+  swpaddninvest: 9.99
+  swpfrequencyno: 1
+  upd_flag: MyString
+
+two:
+  schemecode: 1
+  amc_code: 1
+  frequency: MyString
+  swp: MyString
+  swpdates: MyString
+  swpdays1: 1
+  swpdays2: 1
+  swpdays3: 1
+  swpdays4: 1
+  swpdays5: 1
+  swpdays6: 1
+  swpdays7: 1
+  swpmininvest: 9.99
+  swpaddninvest: 9.99
+  swpfrequencyno: 1
+  upd_flag: MyString

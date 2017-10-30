@@ -1,0 +1,67 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  classification_id: 1
+  avg_year1: 9.99
+  avg_year2: 9.99
+  avg_year3: 9.99
+  avg_year4: 9.99
+  avg_year5: 9.99
+  avg_year6: 9.99
+  avg_year7: 9.99
+  avg_year8: 9.99
+  avg_year9: 9.99
+  avg_year10: 9.99
+  avg_month1: 9.99
+  avg_month2: 9.99
+  avg_month3: 9.99
+  avg_month4: 9.99
+  avg_month5: 9.99
+  avg_month6: 9.99
+  avg_month7: 9.99
+  avg_month8: 9.99
+  avg_month9: 9.99
+  avg_month10: 9.99
+  avg_quarter1: 9.99
+  avg_quarter2: 9.99
+  avg_quarter3: 9.99
+  avg_quarter4: 9.99
+  avg_quarter5: 9.99
+  avg_quarter6: 9.99
+  avg_quarter7: 9.99
+  avg_quarter8: 9.99
+  avg_quarter9: 9.99
+  avg_quarter10: 9.99
+
+two:
+  classification_id: 1
+  avg_year1: 9.99
+  avg_year2: 9.99
+  avg_year3: 9.99
+  avg_year4: 9.99
+  avg_year5: 9.99
+  avg_year6: 9.99
+  avg_year7: 9.99
+  avg_year8: 9.99
+  avg_year9: 9.99
+  avg_year10: 9.99
+  avg_month1: 9.99
+  avg_month2: 9.99
+  avg_month3: 9.99
+  avg_month4: 9.99
+  avg_month5: 9.99
+  avg_month6: 9.99
+  avg_month7: 9.99
+  avg_month8: 9.99
+  avg_month9: 9.99
+  avg_month10: 9.99
+  avg_quarter1: 9.99
+  avg_quarter2: 9.99
+  avg_quarter3: 9.99
+  avg_quarter4: 9.99
+  avg_quarter5: 9.99
+  avg_quarter6: 9.99
+  avg_quarter7: 9.99
+  avg_quarter8: 9.99
+  avg_quarter9: 9.99
+  avg_quarter10: 9.99

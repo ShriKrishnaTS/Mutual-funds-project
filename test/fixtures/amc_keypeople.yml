@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amc_code: 1
+  amc_name: MyString
+  srno: 1
+  name: MyString
+  desg: MyString
+  upd_flag: MyString
+
+two:
+  amc_code: 1
+  amc_name: MyString
+  srno: 1
+  name: MyString
+  desg: MyString
+  upd_flag: MyString

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ps_code: 1
+  mcap_company: 9.99
+  trade_date: 2016-03-02 08:16:54
+  upd_flag: MyString
+
+two:
+  ps_code: 1
+  mcap_company: 9.99
+  trade_date: 2016-03-02 08:16:54
+  upd_flag: MyString

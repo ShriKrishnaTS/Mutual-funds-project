@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  news_id: 1
+  section_name: MyString
+  subsection_name: MyString
+  date: 2016-02-29
+  time: MyString
+  headline: MyString
+  summary: MyString
+  details_news: MyString
+  amccode: MyString
+  schemecode: MyString
+  upd_flag: MyString
+
+two:
+  news_id: 1
+  section_name: MyString
+  subsection_name: MyString
+  date: 2016-02-29
+  time: MyString
+  headline: MyString
+  summary: MyString
+  details_news: MyString
+  amccode: MyString
+  schemecode: MyString
+  upd_flag: MyString

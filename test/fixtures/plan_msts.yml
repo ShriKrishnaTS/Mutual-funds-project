@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  plan_code: 1
+  plan: MyString
+  upd_flag: MyString
+
+two:
+  plan_code: 1
+  plan: MyString
+  upd_flag: MyString

@@ -1,0 +1,113 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  index_code: 1
+  symbol: MyString
+  scripcode: 1
+  date: 2016-02-29 11:09:25
+  prev_date: 2016-02-29 11:09:25
+  close: 9.99
+  prev_close: 9.99
+  1dayret: 9.99
+  1weekdate: 2016-02-29 11:09:25
+  1weekclose: 9.99
+  1weekret: 9.99
+  1mthdate: 2016-02-29 11:09:25
+  1mthclose: 
+  1monthret: 
+  3mthdate: 2016-02-29 11:09:25
+  3mthclose: 
+  3monthret: 9.99
+  6mthdate: 2016-02-29 11:09:25
+  6mthclose: 9.99
+  6monthret: 9.99
+  9mthdate: 2016-02-29 11:09:25
+  9mthclose: 9.99
+  9monthret: 9.99
+  1yrdate: 2016-02-29 11:09:25
+  1yrclose: 9.99
+  1yrret: 9.99
+  2yrdate: 2016-02-29 11:09:25
+  2yrclose: 9.99
+  2yrret: 9.99
+  3yrdate: 2016-02-29 11:09:25
+  3yrclose: 9.99
+  3yrret: 9.99
+  4yrdate: 2016-02-29 11:09:25
+  4yrclose: 9.99
+  4yrret: 9.99
+  5yrdate: 2016-02-29 11:09:25
+  5yrclose: 9.99
+  5yrret: 9.99
+  incdate: 2016-02-29 11:09:25
+  incclose: 9.99
+  incret: 9.99
+  2weekdate: 2016-02-29 11:09:25
+  2weeknav: 9.99
+  2weekret: 9.99
+  3weekdate: 2016-02-29 11:09:25
+  3weeknav: 9.99
+  3weekret: 9.99
+  2mthdate: 2016-02-29 11:09:25
+  2mthnav: 9.99
+  2monthret: 9.99
+  ytddate: 2016-02-29
+  ytdnav: 9.99
+  ytdret: 9.99
+  upd_flag: MyString
+
+two:
+  index_code: 1
+  symbol: MyString
+  scripcode: 1
+  date: 2016-02-29 11:09:25
+  prev_date: 2016-02-29 11:09:25
+  close: 9.99
+  prev_close: 9.99
+  1dayret: 9.99
+  1weekdate: 2016-02-29 11:09:25
+  1weekclose: 9.99
+  1weekret: 9.99
+  1mthdate: 2016-02-29 11:09:25
+  1mthclose: 
+  1monthret: 
+  3mthdate: 2016-02-29 11:09:25
+  3mthclose: 
+  3monthret: 9.99
+  6mthdate: 2016-02-29 11:09:25
+  6mthclose: 9.99
+  6monthret: 9.99
+  9mthdate: 2016-02-29 11:09:25
+  9mthclose: 9.99
+  9monthret: 9.99
+  1yrdate: 2016-02-29 11:09:25
+  1yrclose: 9.99
+  1yrret: 9.99
+  2yrdate: 2016-02-29 11:09:25
+  2yrclose: 9.99
+  2yrret: 9.99
+  3yrdate: 2016-02-29 11:09:25
+  3yrclose: 9.99
+  3yrret: 9.99
+  4yrdate: 2016-02-29 11:09:25
+  4yrclose: 9.99
+  4yrret: 9.99
+  5yrdate: 2016-02-29 11:09:25
+  5yrclose: 9.99
+  5yrret: 9.99
+  incdate: 2016-02-29 11:09:25
+  incclose: 9.99
+  incret: 9.99
+  2weekdate: 2016-02-29 11:09:25
+  2weeknav: 9.99
+  2weekret: 9.99
+  3weekdate: 2016-02-29 11:09:25
+  3weeknav: 9.99
+  3weekret: 9.99
+  2mthdate: 2016-02-29 11:09:25
+  2mthnav: 9.99
+  2monthret: 9.99
+  ytddate: 2016-02-29
+  ytdnav: 9.99
+  ytdret: 9.99
+  upd_flag: MyString

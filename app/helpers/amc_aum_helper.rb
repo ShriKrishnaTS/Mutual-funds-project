@@ -1,0 +1,2 @@
+module AmcAumHelper
+end

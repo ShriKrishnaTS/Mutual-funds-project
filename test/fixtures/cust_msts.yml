@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cust_code: 1
+  cust_name: MyString
+  sebi_reg_no: MyString
+  add1: MyString
+  add2: MyString
+  add3: MyString
+  upd_flag: MyString
+
+two:
+  cust_code: 1
+  cust_name: MyString
+  sebi_reg_no: MyString
+  add1: MyString
+  add2: MyString
+  add3: MyString
+  upd_flag: MyString

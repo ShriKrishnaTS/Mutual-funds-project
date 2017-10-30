@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ltypecode: 1
+  load: MyString
+  upd_flag: MyString
+
+two:
+  ltypecode: 1
+  load: MyString
+  upd_flag: MyString

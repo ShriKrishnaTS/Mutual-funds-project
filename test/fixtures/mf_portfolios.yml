@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schemecode: 1
+  invdate: 2016-02-22 13:54:14
+  invenddate: 2016-02-22 13:54:14
+  srno: 1
+  fincode: 1
+  asect_code: 1
+  sect_code: 1
+  noshares: 1
+  mktval: 9.99
+  aum: 9.99
+  holdpercentage: 9.99
+  compname: MyString
+  sect_name: MyString
+  asect_name: MyString
+  rating: MyString
+  upd_flag: MyString
+
+two:
+  schemecode: 1
+  invdate: 2016-02-22 13:54:14
+  invenddate: 2016-02-22 13:54:14
+  srno: 1
+  fincode: 1
+  asect_code: 1
+  sect_code: 1
+  noshares: 1
+  mktval: 9.99
+  aum: 9.99
+  holdpercentage: 9.99
+  compname: MyString
+  sect_name: MyString
+  asect_name: MyString
+  rating: MyString
+  upd_flag: MyString

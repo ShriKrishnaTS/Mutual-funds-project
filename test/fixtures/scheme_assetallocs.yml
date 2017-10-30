@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schemeinv_id: 1
+  schemecode: 1
+  investment: MyString
+  mininv: 9.99
+  maxniv: 9.99
+  upd_flag: MyString
+
+two:
+  schemeinv_id: 1
+  schemecode: 1
+  investment: MyString
+  mininv: 9.99
+  maxniv: 9.99
+  upd_flag: MyString

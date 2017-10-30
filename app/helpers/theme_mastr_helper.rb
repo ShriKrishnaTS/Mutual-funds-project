@@ -1,0 +1,2 @@
+module ThemeMastrHelper
+end

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amc_code: 1
+  schemecode: 1
+  date: 2016-02-29 10:57:30
+  invenddate: 2016-02-29 10:57:30
+  avg_mat_num: 9.99
+  avg_mat_days: MyString
+  mod_dur_num: 9.99
+  mod_dur_days: MyString
+  ytm: 9.99
+  turnover_ratio: 9.99
+  tr_mode: MyString
+  upd_flag: MyString
+
+two:
+  amc_code: 1
+  schemecode: 1
+  date: 2016-02-29 10:57:30
+  invenddate: 2016-02-29 10:57:30
+  avg_mat_num: 9.99
+  avg_mat_days: MyString
+  mod_dur_num: 9.99
+  mod_dur_days: MyString
+  ytm: 9.99
+  turnover_ratio: 9.99
+  tr_mode: MyString
+  upd_flag: MyString

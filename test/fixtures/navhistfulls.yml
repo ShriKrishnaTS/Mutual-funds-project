@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schemecode: 9.99
+  navdate: 2016-02-29 13:29:41
+  navrs: 9.99
+  repurprice: 9.99
+  saleprice: 9.99
+  adjustednav_c: 9.99
+  adjustednav_nonc: 9.99
+  upd_flag: MyString
+
+two:
+  schemecode: 9.99
+  navdate: 2016-02-29 13:29:41
+  navrs: 9.99
+  repurprice: 9.99
+  saleprice: 9.99
+  adjustednav_c: 9.99
+  adjustednav_nonc: 9.99
+  upd_flag: MyString

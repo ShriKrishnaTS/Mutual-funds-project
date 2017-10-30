@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  indexcode: 1
+  fincode: 1
+  scripcode: MyString
+  indexname: MyString
+  upd_flag: MyString
+
+two:
+  indexcode: 1
+  fincode: 1
+  scripcode: MyString
+  indexname: MyString
+  upd_flag: MyString

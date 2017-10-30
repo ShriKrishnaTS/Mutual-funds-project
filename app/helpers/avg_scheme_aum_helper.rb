@@ -1,0 +1,2 @@
+module AvgSchemeAumHelper
+end

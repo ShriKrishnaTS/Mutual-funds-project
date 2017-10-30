@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schemecode: 1
+  portfolio_marketcap: MyString
+  fund: 9.99
+  category_avg: 9.99
+
+two:
+  schemecode: 1
+  portfolio_marketcap: MyString
+  fund: 9.99
+  category_avg: 9.99

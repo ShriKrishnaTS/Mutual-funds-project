@@ -1,0 +1,103 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  index_code: 1
+  date: 2016-03-15 12:59:42
+  dayret_1: 9.99
+  weekdate_1: 2016-03-15 12:59:42
+  weekclose_1: 9.99
+  weekret_1: 9.99
+  mthdate_1: 2016-03-15 12:59:42
+  mthclose_1: 9.99
+  monthret_1: 9.99
+  mthdate_3: 2016-03-15 12:59:42
+  mthclose_3: 9.99
+  monthret_3: 9.99
+  mthdate_6: 2016-03-15 12:59:42
+  mthclose_6: 9.99
+  monthret_6: 9.99
+  mthdate_9: 2016-03-15 12:59:42
+  mthclose_9: 9.99
+  monthret_9: 9.99
+  yrdate_1: 2016-03-15 12:59:42
+  yrclose_1: 9.99
+  yrret_1: 9.99
+  yrdate_2: 2016-03-15 12:59:42
+  yrclose_2: 9.99
+  yrret_2: 9.99
+  yrdate_3: 2016-03-15 12:59:42
+  yrclose_3: 9.99
+  yrret_3: 9.99
+  yrdate_4: 2016-03-15 12:59:42
+  yrclose_4: 9.99
+  yrret_4: 9.99
+  yrdate_5: 2016-03-15 12:59:42
+  yrclose_5: 9.99
+  yrret_5: 9.99
+  incdate: 2016-03-15 12:59:42
+  incclose: 9.99
+  incret: 9.99
+  weekdate_2: 2016-03-15 12:59:42
+  weeknav_2: 1.5
+  weekret_2: 1.5
+  weekdate_3: 2016-03-15 12:59:42
+  weeknav_3: 9.99
+  weekret_3: 9.99
+  mthdate_2: 2016-03-15 12:59:42
+  mthnav_2: 9.99
+  monthret_2: 2016-03-15 12:59:42
+  ytddate: 9.99
+  ytdnav: 9.99
+  ytdret: 9.99
+  upd_flag: MyString
+
+two:
+  index_code: 1
+  date: 2016-03-15 12:59:42
+  dayret_1: 9.99
+  weekdate_1: 2016-03-15 12:59:42
+  weekclose_1: 9.99
+  weekret_1: 9.99
+  mthdate_1: 2016-03-15 12:59:42
+  mthclose_1: 9.99
+  monthret_1: 9.99
+  mthdate_3: 2016-03-15 12:59:42
+  mthclose_3: 9.99
+  monthret_3: 9.99
+  mthdate_6: 2016-03-15 12:59:42
+  mthclose_6: 9.99
+  monthret_6: 9.99
+  mthdate_9: 2016-03-15 12:59:42
+  mthclose_9: 9.99
+  monthret_9: 9.99
+  yrdate_1: 2016-03-15 12:59:42
+  yrclose_1: 9.99
+  yrret_1: 9.99
+  yrdate_2: 2016-03-15 12:59:42
+  yrclose_2: 9.99
+  yrret_2: 9.99
+  yrdate_3: 2016-03-15 12:59:42
+  yrclose_3: 9.99
+  yrret_3: 9.99
+  yrdate_4: 2016-03-15 12:59:42
+  yrclose_4: 9.99
+  yrret_4: 9.99
+  yrdate_5: 2016-03-15 12:59:42
+  yrclose_5: 9.99
+  yrret_5: 9.99
+  incdate: 2016-03-15 12:59:42
+  incclose: 9.99
+  incret: 9.99
+  weekdate_2: 2016-03-15 12:59:42
+  weeknav_2: 1.5
+  weekret_2: 1.5
+  weekdate_3: 2016-03-15 12:59:42
+  weeknav_3: 9.99
+  weekret_3: 9.99
+  mthdate_2: 2016-03-15 12:59:42
+  mthnav_2: 9.99
+  monthret_2: 2016-03-15 12:59:42
+  ytddate: 9.99
+  ytdnav: 9.99
+  ytdret: 9.99
+  upd_flag: MyString

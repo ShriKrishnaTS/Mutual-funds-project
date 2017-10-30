@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Rupeevest</title>
+	<%= csrf_meta_tags %>
+	<%= stylesheet_link_tag "application", "data-turbolinks-track" => true %>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+</head>
+<body>
+<input type="button" value="hello" onclick="alert('hi')"/>
+	<div class="container">
+		<div class="row">
+			<!-- fixed button of  -->
+			<!-- <div class="fixed-button">
+	        	<button class="button button5">Invest Now</button>
+	       	</div> -->
+			<div class="col-xs-12 header-buttons">
+				<ul>
+					<li><a href=""><button class="button button5">Login</button></a></li>
+					<li><a href=""><button class="button button5">Signup</button></a></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-md-6 col-md-offset-3 search-button">
+				<div class="input-group">
+				    <input type="text" class="form-control" placeholder="Search for...">
+				      <span class="input-group-btn">
+				        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+				      </span>
+				</div><!-- /input-group -->
+			</div>
+			<div class="col-xs-12 tab-wrapper">
+				<ul class="nav nav-tabs" id="main-tabs">
+			    <li class="nav-menu"><a data-toggle="tab" href="#home">Asset Class Section</a></li>
+			    <li class="nav-menu"><a data-toggle="tab" href="#menu1">Request Rating </a></li>
+			    <li class="nav-menu"><a data-toggle="tab" href="#menu2">Filters </a></li>
+			    <li class="nav-menu"><a data-toggle="tab" href="#menu3">Choose Columns </a></li>
+			  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in">
+    	<div class="col-xs-12 col-md-8 asset-class-section">
+    		<div class="col-xs-12 col-md-3">
+    		<input type="checkbox" id="chkAllEquity" onclick = "chkbox_click(this)" name = "chkboxasset">All Equity<br>
+		    <input type="checkbox" id="chkAllDebt" onclick = "chkbox_click(this)">All Debt<br>
+		    <input type="checkbox"  id="chkAllHybrid" onclick = "chkbox_click(this)">All Hybrid<br>
+		    <input type="checkbox" id="chkAllEtfs" onclick = "chkbox_click(this)">All ETFs<br>
+		    <input type="checkbox" id="chkEqLc" name = "chkAllEquity" class="chkboxasset">Equity: Large Cap<br>
+		    <input type="checkbox" id="chkEqLc" name = "chkAllEquity" class="chkboxasset" >Equity: Multi Cap<br>
+		    <input type="checkbox" id="chkEqMsC" name = "chkAllEquity" class="chkboxasset">Equity: Mid Small Cap<br>
+		    <input type="checkbox"id="chkEqSe" name = "chkAllEquity" class="chkboxasset">Equity: Sector Equity<br>
+		    <input type="checkbox" id="chkEqTx" name = "chkAllEquity" class="chkboxasset">Equity: Tax Saving (ELSS)<br>
+		    <input type="checkbox" id="chkEqIe" name = "chkAllEquity" class="chkboxasset">Equity: International Equity<br>
+		    <input type="checkbox" id="chkEo" name = "chkAllEquity" class="chkboxasset">Equity: Equity: Other<br>
+      	</div>
+    	<div class="col-xs-12 col-md-8">
+    		<input type="checkbox" id="chkDbLust" name = "chkAllDebt">Debt: Liquid/Ultra Short term<br>
+		    <input type="checkbox" id="chkDbStg" name = "chkAllDebt">Debt: Short Term/GILT<br>
+		    <input type="checkbox" id="chkDbMlt" name = "chkAllDebt">Debt: Medium & Long Term/GILT<br>
+		    <input type="checkbox" id="chkDbFtp" name = "chkAllDebt">Debt: FTP/FMP(closed ended)<br>
+		    <input type="checkbox" id="chkDbOt" name = "chkAllDebt">Debt: Others<br>
+		    <input type="checkbox"  id="chkHyBl" name = "chkAllHybrid">Hybrid: Balanced(EQ oriented)<br>
+		    <input type="checkbox" id="chkHyBldo" name = "chkAllHybrid">Hybrid: Balanced(Debt oriented)<br>
+		    <input type="checkbox" id="chkHyAr" name = "chkAllHybrid">Hybrid: Arbitrage<br>
+		    <input type="checkbox" id="chkHyOth" name = "chkAllHybrid">Hybrid: Other <br>
+		    <input type="checkbox" id="chkEtInd" name = "chkAllEtfs">ETFs: Index<br>
+		    <input type="checkbox" id="chkEtGol" name = "chkAllEtfs">ETFs: Gold<br>
+
+    	</div>
+    	</div>
+
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      	<div class="col-xs-12 col-md-4 rupeevest-header-wrapper">
+      		<div class="col-xs-12 rupeevest-header">
+	      		<p>RUPEEVEST RATING</p>
+	      		<div class="col-xs-12 star-checkbox">
+	      			<input type="checkbox">All<br>
+	      			<p><input type="checkbox"><input type="text" id="hello" class="rating"></p>
+	      			<p><input type="checkbox"><input type="text" id="hello" class="rating"></p>
+
+
+	      			<input type="checkbox">Unrated<br>
+
+	      		</div>
+      		</div>
+
+    	</div>
+    	<div class="col-xs-12 col-md-8 factor-header-wrapper">
+    		<div class="col-xs-12 factor-header">
+    			<p>FACTOR SCORE</p>
+    			<div class="col-xs-12 range-slider-wrapper">
+	    			<div class="col-md-4">
+	    				<p>Total Column</p>
+	    				<div id="slider">
+
+						</div>
+	    			</div>
+	    			<div class="col-md-4">
+	    				<p>Consistency Of Return</p>
+	    				<div id="slider1">
+
+						</div>
+	    			</div>
+	    			<div class="col-md-4">
+	    				<p>Risk</p>
+	    				<div id="slider2">
+
+						</div>
+	    			</div>
+    			</div>
+    			<div class="col-xs-12 range-slider-wrapper">
+	    			<div class="col-md-4">
+	    				<p>Cost Factors</p>
+	    				<div id="slider3">
+
+						</div>
+	    			</div>
+	    			<div class="col-md-4">
+	    				<p>Portfolio Attributes</p>
+	    				<div id="slider4">
+
+						</div>
+	    			</div>
+    			</div>
+    			<div class="col-xs-12 bottom-condition">
+    				<div class="col-xs-12 col-md-9 condition-inner">
+    					<p>*5 denotes the best in its category,1 denotes the wrost within its category</p>
+    				</div>
+    				<div class="col-xs-12 col-md-3 Reset-wrapper">
+    					<p><a href=""><img src="images/reset.png">Reset All</a></p>
+    					<p><a href=""><img src="images/thumb.png">Done</a></p>
+    				</div>
+    			</div>
+    		</div>
+
+    	</div>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <div class="col-xs-12 filters-outer-wrapper">
+      	<div class="col-xs-12 open-closed-button-wrapper">
+      		<div class="col-xs-4 horizon-button">
+      			<p>Horizon</p>
+      			<button class="button horin-button">Open</button><button class="button horion-sec-button">Closed</button>
+      		</div>
+      		<div class="col-xs-4 nature-button">
+      			<p>Nature</p>
+
+      				<button class="button horin-button">Growth</button><button class="button horion-sec-button">Dividend</button>
+
+      		</div>
+      		<div class="col-xs-4 AMC-button">
+      			<!-- <span class="shreena">
+      				AMC <input type="checkbox" class="shrena"> Select All<br>
+
+      			</span> -->
+      			<div class="col-xs-12 col-md-4 amc-header">
+      				AMC
+      			</div>
+      			<div class="col-xs-12 col-md-4">
+      				<input type="checkbox" class="shrena"> Select All
+      			</div>
+
+      				<div class="select-wrap">
+                     <select class="form-control city-select" name="cityname">
+                     <option value="" > Select city</option>
+                     <option value="abu-dhabi" >Abu Dhabi</option>
+                     <option value="ajman" >Ajman</option>
+                     <option value="al-ain" >Al Ain</option>
+                     <option value="dubai" >Dubai</option>
+                     <option value="fujairah" >Fujairah</option>
+                     <option value="ras-al-khaimah" >Ras Al Khaimah</option>
+                     <option value="sharjah" >Sharjah</option>
+                     <option value="umm-al-quwain">Umm Al Quwain</option>
+                     </select>
+                   </div>
+      		</div>
+      		<div class="col-xs-12 inner-slider-wrapper">
+      			<div class="col-xs-2 ">
+      				<!-- <div id="slider3">
+
+					</div> -->
+					Asset Size
+					<div id="slider5">
+
+					</div>
+					<div class="col-xs-2 min-range-box">
+						<p>0</p>
+						<input type="text">
+					</div>
+					<div class="col-xs-2 max-range-box">
+						<p>23</p>
+						<input type="text">
+					</div>
+      			</div>
+      			<div class="col-xs-2 slider-property">
+      				 Age
+      				 <div id="slider6">
+
+					</div>
+					<div class="col-xs-2 min-range-box">
+						<p>0</p>
+						<input type="text">
+					</div>
+					<div class="col-xs-2 max-range-box">
+						<p>23</p>
+						<input type="text">
+					</div>
+      			</div>
+      			<div class="col-xs-2 slider-property">
+      				Exit Load
+      				<div id="slider7">
+
+					</div>
+					<div class="col-xs-2 min-range-box">
+						<p>0</p>
+						<input type="text">
+					</div>
+					<div class="col-xs-2 max-range-box">
+						<p>23</p>
+						<input type="text">
+					</div>
+      			</div>
+      			<div class="col-xs-2 slider-property">
+      				Expense Ratio
+      				<div id="slider8">
+
+					</div>
+					<div class="col-xs-2 min-range-box">
+						<p>0</p>
+						<input type="text">
+					</div>
+					<div class="col-xs-2 max-range-box">
+						<p>23</p>
+						<input type="text">
+					</div>
+      			</div>
+      			<div class="col-xs-2 slider-property">
+      				Turnover Ratio
+      				<div id="slider9">
+
+					</div>
+					<div class="col-xs-2 min-range-box">
+						<p>0</p>
+						<input type="text">
+					</div>
+					<div class="col-xs-2 max-range-box">
+						<p>23</p>
+						<input type="text">
+					</div>
+      			</div>
+      		</div>
+      		<div class="col-xs-12 Reset-All-wrapper">
+    					<p><a href=""><img src="images/reset.png"> Reset All</a></p>
+    					<div class="pull-right">
+    						<p ><a href=""><img src="images/thumb.png">  Done</a></p>
+    					</div>
+    				</div>
+
+      	</div>
+
+      </div>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <div class="col-xs-12 col-md-4 righ-side-rating">
+      	<div class="col-xs-12 header-of-rating">
+      		<p>RATING</p>
+      		<div class="col-xs-12 return-ckeckbox">
+      			<input type="checkbox">Rupeevest Rating<br>
+      			<input type="checkbox">Total Return<br>
+      			<input type="checkbox">Consistency of Return<br>
+      			<input type="checkbox">Risk<br>
+      			<input type="checkbox">Cost Factors<br>
+      			<input type="checkbox">Portfolio Attributes<br>
+
+      		</div>
+
+      	</div>
+      	<div class="col-xs-12 header-of-rating">
+      		<p>RETURN</p>
+      		<div class="col-xs-12 return-ckeckbox">
+      			<input type="checkbox">Return (1m)<br>
+      			<input type="checkbox">Return (3m)<br>
+      			<input type="checkbox">Return (6m)<br>
+      			<input type="checkbox">Return (1 yr)<br>
+      			<input type="checkbox">Return (2 yr)<br>
+      			<input type="checkbox">Return (3 yr)<br>
+      			<input type="checkbox">Return (5 yr)<br>
+      			<input type="checkbox">Return (10 yr)<br>
+      			<input type="checkbox">Last 10 years,annual return<br>
+      			<input type="checkbox">Last 10 quarter,quarterly return<br>
+      			<input type="checkbox">Last 10 month,monthly return<br>
+
+      		</div>
+      	</div>
+      </div>
+      <div class="col-xs-12 col-md-8 left-side-rating">
+      	<div class="col-xs-12 choose-column-description">
+      		<p>BASIC</p>
+      		<div class="col-xs-12 choose-column-checkbox">
+      			<input type="checkbox">AMU<br>
+      			<input type="checkbox">NAV<br>
+      			<input type="checkbox">Expense Ratio<br>
+      			<input type="checkbox">Turnover Ratio<br>
+      			<input type="checkbox">Exit Ratio<br>
+      			<input type="checkbox">Expense Load<br>
+      			<input type="checkbox">Launch Date<br>
+      			<input type="checkbox">Minimum Investment<br>
+      			<input type="checkbox">Highest Asset Allocation (In equity it should be sector,in debt the instrument & its rating eg Corporate Bond AA)<br>
+      			<input type="checkbox">Avg Maturity (Only debt Funds)<br>
+      			<input type="checkbox">Mod Duration (Only debt Funds)<br>
+      			<input type="checkbox">YTM (Only debt Funds)<br>
+
+      		</div>
+      	</div>
+      		<div class="col-xs-12 risk-return-parameters">
+      			<p>RISK/RETURN PARAMETERS</p>
+      			<div class="col-xs-12">
+      				<input type="checkbox">Beta<br>
+      				<input type="checkbox">Sharpe<br>
+      				<input type="checkbox">Sortino<br>
+      				<input type="checkbox">Standard Deviation<br>
+      				<input type="checkbox">Alpha<br>
+      			</div>
+      		</div>
+
+      	</div>
+      </div>
+
+    </div>
+  </div>
+			</div>
+			<div class="col-xs-12 lower-buttons-wrapper no-padding">
+				<div class="col-xs-12 no-padding date-format1" id="date-wrapper">
+				  	<ul>
+              <li><span>From</span><input class="date-picker" class="XXinput calendar" placeholder="dd-mmm-yyyy" type="text" title="Date in the format dd-mmm-yyyy" tabindex="3" readonly="readonly"></li>
+              <li><span>To</span><input class="date-picker" class="XXinput calendar" placeholder="dd-mmm-yyyy" type="text" title="Date in the format dd-mmm-yyyy" tabindex="3" readonly="readonly"></li>
+            </ul>
+  				</div>
+  				<div class="col-xs-12 download-compare no-padding">
+  					<ul>
+  						<li><a href=""><button class="button button5">Download</button></a></li>
+  						<li><a href=""><button class="button button5">Add To Compare</button></a></li>
+  					</ul>
+  				</div>
+			</div>
+
+
+
+
+			<div class="col-xs-12 table-layout-rows">
+				<table style="width:100%" id="tblData">
+					<tr>
+						<th></th>
+						<th>Fund</th>
+						<th>Rupeevest <br>Rating</th>
+						<th>AUM <br>(in crores)</th>
+						<th>Return<br>(1 year)</th>
+						<th>Return<br>(3 year)</th>
+						<th>Return<br> (5 year)</th>
+						<th>Expense<br>Ratio</th>
+						<th>Highest Sector<br>Allocation</th>
+					</tr>
+					<!-- <tr>
+						<td><input type="checkbox"></td>
+						<td>hello dileep how are you what are you doing</td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td></td>
+						<td></td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+						<td>...%</td>
+					</tr> -->
+				</table>
+			</div>
+			<!-- second section -->
+
+
+					</div>
+	</div>
+	</div>
+
+<script type="text/javascript" src="javascripts/jquery-1.9.js"></script>
+<script type="text/javascript" src="javascripts/nouislider.js"></script>
+<script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="javascripts/custom.js"></script>
+<!-- <script type="text/javascript" src="js/star-rating.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
+ <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<script type="text/javascript" src="javascripts/ion.rangeSlider.js"></script>
+
+<script type="text/javascript">
+// 	$("#example_id").ionRangeSlider({
+//     type: "double",
+//     grid: true,
+//     min: 0,
+//     max: 8000,
+//     from: 500,
+//     to: 1000,
+//     prefix: "$"
+// });
+/*var slider = document.getElementById('slider');*/
+
+/*$("#example_id").ionRangeSlider();*/
+
+var slider = document.getElementById('slider');
+
+noUiSlider.create(slider, {
+	start: [20, 80],
+	connect: true,
+	range: {
+		'min': 0,
+		'max': 100
+	}
+});
+
+var slider = document.getElementById('slider1');
+
+noUiSlider.create(slider, {
+	start: [20, 80],
+	connect: true,
+	range: {
+		'min': 0,
+		'max': 100
+	}
+});
+
+var slider = document.getElementById('slider2');
+
+noUiSlider.create(slider, {
+	start: [20, 80],
+	connect: true,
+	range: {
+		'min': 0,
+		'max': 100
+	}
+});
+
+var slider = document.getElementById('slider3');
+
+noUiSlider.create(slider, {
+	start: [20, 80],
+	connect: true,
+	range: {
+		'min': 0,
+		'max': 100
+	}
+});
+var slider = document.getElementById('slider4');
+
+noUiSlider.create(slider, {
+	start: [20, 80],
+	connect: true,
+	range: {
+		'min': 0,
+		'max': 100
+	}
+});
+var slider = document.getElementById('slider5');
+
+noUiSlider.create(slider, {
+	start: [20, 80],
+	connect: true,
+	range: {
+		'min': 0,
+		'max': 100
+	}
+});
+var slider = document.getElementById('slider6');
+
+noUiSlider.create(slider, {
+	start: [20, 80],
+	connect: true,
+	range: {
+		'min': 0,
+		'max': 100
+	}
+});
+var slider = document.getElementById('slider7');
+
+noUiSlider.create(slider, {
+	start: [20, 80],
+	connect: true,
+	range: {
+		'min': 0,
+		'max': 100
+	}
+});
+var slider = document.getElementById('slider8');
+
+noUiSlider.create(slider, {
+	start: [20, 80],
+	connect: true,
+	range: {
+		'min': 0,
+		'max': 100
+	}
+});
+var slider = document.getElementById('slider9');
+
+noUiSlider.create(slider, {
+	start: [20, 80],
+	connect: true,
+	range: {
+		'min': 0,
+		'max': 100
+	}
+});
+
+var nowTemp = new Date();
+var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+
+var checkin = $('.date-picker').datepicker({
+  onRender: function(date) {
+    return date.valueOf() < now.valueOf() ? 'disabled' : '';
+  }
+}).on('changeDate', function(ev) {
+  if (ev.date.valueOf() > checkout.date.valueOf()) {
+    var newDate = new Date(ev.date)
+    newDate.setDate(newDate.getDate() + 1);
+    checkout.setValue(newDate);
+  }
+  checkin.hide();
+  $('#dpd2')[0].focus();
+}).data('datepicker');
+var checkout = $('#dpd2').datepicker({
+  onRender: function(date) {
+    return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+  }
+}).on('changeDate', function(ev) {
+  checkout.hide();
+}).data('datepicker');
+
+
+ $( ".calendar" ).datepicker();
+</script>
+
+
+
+ </div>
+</body>
+
+</html>

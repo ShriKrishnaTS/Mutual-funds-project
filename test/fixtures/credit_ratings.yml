@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  accord_display_name: MyString
+  rupeevest_display_name: MyString
+  rupeevest_group: MyString
+
+two:
+  accord_display_name: MyString
+  rupeevest_display_name: MyString
+  rupeevest_group: MyString

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schemecode: 1
+  classification: MyString
+  invdate: 2016-09-08 09:36:39
+  holdpercentage: 9.99
+  rupeevest_group: MyString
+
+two:
+  schemecode: 1
+  classification: MyString
+  invdate: 2016-09-08 09:36:39
+  holdpercentage: 9.99
+  rupeevest_group: MyString

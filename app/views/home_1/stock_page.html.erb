@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fund preview 5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" href="bower_components/chartist/dist/chartist.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css"> -->
+	<%= csrf_meta_tags %>
+	<%= stylesheet_link_tag "application", "data-turbolinks-track" => true %>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+</head>
+<body onload ="stock_search();get_stock_data();fundname_search()" >
+<header id="header">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <form class="navbar-form" role="search">
+            <div class="input-group add-on">
+                <input class="form-control" placeholder="Search" name="srch-term" id="fund_names" type="text">
+                <div class="input-group-btn">
+                    <button class="btn btn-warning" type="submit" onclick="setvalue_schemename()"><i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4 star-one pull-right">
+        <button type="button" class="btn btn-default">Login</button>
+        <button type="button" class="btn btn-default">Sign Up</button>
+    </div>
+</header>
+<section id="main" class="top-margin">
+
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <div class="col-md-6">
+                    <form class="navbar-form" role="search">
+                        <div class="input-group add-on">
+                            <input class="form-control" placeholder="Search sector allocation by MFs" name="srch-term"
+                                   id="stock_names" type="text">
+                            <div class="input-group-btn">
+                                <button class="btn btn-warning" type="submit"><i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+
+                </div>
+            </div>
+            <div class="row">
+                <h2 class="left-margin">INFOSYS</h2>
+            </div>
+            <div class="row paragraph">
+                <h4 class="pull-left">Funds Invested in the Sector</h4>
+                <button type="button" class="btn btn-default pull-right">Download</button>
+            </div>
+
+        </div>
+        <div id="table">
+            <table class="table table-responsive" id="stock_table">
+                <!-- <thead>
+                <tr>
+                    <th>Fund</th>
+                    <th>Dec-15</th>
+                    <th>Sep-15</th>
+                    <th>Jun-15</th>
+                    <th>Mar-15</th>
+                    <th>Dec-14</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="active">
+                    <td>HDFC Mutual Fund</td>
+                    <td>1.625</td>
+                    <td>1.640</td>
+                    <td>1.541</td>
+                    <td>1.512</td>
+                    <td>1.639</td>
+                </tr>
+                <tr>
+                    <td>ICICI Prudential Mutual Fund</td>
+                    <td>0.830</td>
+                    <td>0.785</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="active">
+                    <td>UTI Mutual Fund</td>
+                    <td>0.711</td>
+                    <td>0.701</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody> -->
+            </table>
+        </div>
+       <!--  <table class="table table-responsive">
+            <tbody>
+            <tr class="active">
+                <td></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+            </tr>
+            <tr class="active">
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+            </tr>
+            <tr class="active">
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+            </tr>
+            <tr class="active">
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+            </tr>
+            </tbody>
+        </table> -->
+    </div>
+</section>
+<%= javascript_include_tag "js/landing.js" %>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="bower_components/chartist/dist/chartist.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.2.3.js"></script>
+<script src="js/highcharts.js"></script>
+<!--<script src="js/exporting.js"></script>-->
+<script src="js/grid-light.js"></script>
+<script type="text/javascript">
+</script>
+</body>
+</html>

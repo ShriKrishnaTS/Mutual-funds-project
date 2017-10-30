@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fund preview 5</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <%= stylesheet_link_tag "application", "data-turbolinks-track" => true %>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"/>
+
+    </head>
+    <body onload="sector_search();fundname_search()">
+
+            <div class="container custom-container" id="HTMLtoPDF">
+                <!--header starts here -->
+                <div class="col-xs-12 header main-header-wrapper">
+                    <div>
+                        <div class="col-xs-12 fixed-header" >
+                            <div class="col-xs-12 col-sm-3">
+                                <%=image_tag "logo-img.png"%>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 search-button">
+                                <div class="input-group">
+                                    <input type="text" id="fund_names" class="form-control" placeholder="Search for...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button" onclick="setvalue_schemename()">
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                                <!-- /input-group -->
+                            </div>
+                            <div class="col-xs-12 col-sm-3 header-buttons" class="hidenforprint" id="registrationwrapper">
+                                <ul>
+                                    <li>
+                                        <a href="">Login</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Signup</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Header ends here -->
+
+                <!--sub search bar starts here-->
+                <div class="row tab-main-menu-wrapper">
+                    <div class="col-md-6">
+                        <form class="navbar-form padding-let" role="search">
+                            <div class="input-group add-on">
+                                <input class="form-control sector-control" placeholder="Search sector allocation by MFs" id="sector_names" type="text">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-warning sector-warning stock-styling" type="button" onclick="get_sector()">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6"></div>
+                </div>
+                <!-- sub search ends here -->
+                <div class="row mTop">
+                    <div class="col-xs-12">
+                        <span id="stock_head" class="fontSize24"></span>
+                    </div>
+                </div>
+                  <div id="HTMLtoPDF">
+
+                <div class="row">
+                    <div class="overflow-h border-top-bottom mr-left-right-15 funds-blue">
+                        <h4 class="pull-left">Funds Invested in the Sector</h4>
+                        <button type="button" class="btn btn-default download-button pull-right green-button" id="hidenforprint" onclick="HTMLtoPDF()">Download</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div id="table">
+                            <table class="table no-table-border odd-even-table-bg table-responsive sector-page-odd-coolor custom-table-sorting " id="sector_table"  ></table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- <a href="#" onclick="HTMLtoPDF()">Download PDF</a> -->
+        <%= javascript_include_tag "ui/jquery-2.2.3.js" %>
+        <%= javascript_include_tag "ui/1.11.4/jquery-ui.js" %>
+        <%= javascript_include_tag "ui/jquery-ui.js" %>
+        <%= javascript_include_tag "js/landing.js" %>
+        <%= javascript_include_tag "ui/jspdf.js" %>
+        <%= javascript_include_tag "ui/pdfFromHTML.js" %>
+        <%= javascript_include_tag "js/customsorting.js" %>
+
+
+        <script type="text/javascript" src="http://tablesorter.com/__jquery.tablesorter.min.js"></script>
+        <script type="text/javascript" src="http://tablesorter.com/docs/js/chili/chili-1.8b.js"></script>
+        <script type="text/javascript">
+
+        </script>
+    </body>
+
+</html>

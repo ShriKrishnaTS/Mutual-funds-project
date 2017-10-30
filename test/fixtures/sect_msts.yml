@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sect_code: 9.99
+  sect_name: MyString
+  upd_flag: MyString
+
+two:
+  sect_code: 9.99
+  sect_name: MyString
+  upd_flag: MyString

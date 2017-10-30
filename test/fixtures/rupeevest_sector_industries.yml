@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rv_sect_code: 1
+  ind_code: 1
+
+two:
+  rv_sect_code: 1
+  ind_code: 1

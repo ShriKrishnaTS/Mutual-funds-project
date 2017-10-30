@@ -1,0 +1,2 @@
+module ReadamcmstHelper
+end

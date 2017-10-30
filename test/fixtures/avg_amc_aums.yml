@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amc_code: 1
+  aumdate: 2016-02-26 13:05:09
+  totalaum: 9.99
+  upd_flag: MyString
+
+two:
+  amc_code: 1
+  aumdate: 2016-02-26 13:05:09
+  totalaum: 9.99
+  upd_flag: MyString

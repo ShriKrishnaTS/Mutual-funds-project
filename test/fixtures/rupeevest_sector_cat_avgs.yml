@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  classification_id: 1
+  rv_sect_code: 1
+  holdpercentage: 9.99
+  cat_avg: 9.99
+
+two:
+  classification_id: 1
+  rv_sect_code: 1
+  holdpercentage: 9.99
+  cat_avg: 9.99

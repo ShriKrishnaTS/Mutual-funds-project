@@ -1,0 +1,2 @@
+module SchemeAumHelper
+end

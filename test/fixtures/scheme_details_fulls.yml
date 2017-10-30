@@ -1,0 +1,173 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schemecode: 1
+  amfi_code: 1
+  cmas_code: MyString
+  amc_code: 1
+  s_name: MyString
+  amfi_name: MyString
+  isin_code: MyString
+  type_code: 1
+  opt_code: 1
+  classcode: 1
+  theme_code: 1
+  rt_code: 1
+  plan: 1
+  cust_code: 1
+  cust_code2: 1
+  price_freg: 1
+  init_price: 9.99
+  offerprice: 9.99
+  nfo_open: 2016-02-29 13:22:08
+  nfo_close: 2016-02-29 13:22:08
+  reopen_dt: 2016-02-29 13:22:08
+  elf: MyString
+  etf: MyString
+  stp: MyString
+  primary_fund: MyString
+  primary_fd_code: 1
+  sip: MyString
+  swp: MyString
+  switch: MyString
+  mininvt: 9.99
+  multiples: 1
+  inc_invest: 9.99
+  adnmultiples: 9.99
+  fund_mgr1: MyString
+  fund_mgr2: MyString
+  fund_mgr3: MyString
+  fund_mgr4: MyString
+  since: 2016-02-29 13:22:08
+  status: MyString
+  cutsub: MyString
+  cutred: MyString
+  red: MyString
+  mob_name: MyString
+  div_freq: 1
+  scheme_symbol: MyString
+  fund_mgr_code1: 1
+  fund_mgr_code2: 1
+  fund_mgr_code3: 1
+  fund_mgr_code4: 1
+  redemption_date: 2016-02-29 13:22:08
+  dateofallot: 2016-02-29 13:22:08
+  div_code: 9.99
+  legalnames: MyString
+  amfitype: MyString
+  nontxnday: MyString
+  schemebank: MyString
+  schemebankaccountnumber: MyString
+  schemebankbranch: MyString
+  dividendoptionflag: MyString
+  lockinperiod: MyString
+  ispurchaseavailable: MyString
+  isredeemavailable: MyString
+  minredemptionamount: 9.99
+  redemptionmultipleamount: 9.99
+  minredemptionunits: 9.99
+  redemptionmultiplesunits: 9.99
+  minswitchamount: 9.99
+  switchmultipleamount: 9.99
+  minswitchunits: 9.99
+  switchmultiplesunits: 9.99
+  securitycode: MyString
+  unit: MyString
+  switchout: MyString
+  minswitchoutamount: 9.99
+  switchoutmultipleamount: 9.99
+  minswitchoutunits: 9.99
+  switchoutmultiplesunits: 9.99
+  incept_date: 2016-02-29 13:22:08
+  incept_nav: 9.99
+  defaultopt: MyString
+  defaultplan: 
+  lockperiod: 1
+  oddraftdate: 2016-02-29 13:22:08
+  upd_flag: MyString
+
+two:
+  schemecode: 1
+  amfi_code: 1
+  cmas_code: MyString
+  amc_code: 1
+  s_name: MyString
+  amfi_name: MyString
+  isin_code: MyString
+  type_code: 1
+  opt_code: 1
+  classcode: 1
+  theme_code: 1
+  rt_code: 1
+  plan: 1
+  cust_code: 1
+  cust_code2: 1
+  price_freg: 1
+  init_price: 9.99
+  offerprice: 9.99
+  nfo_open: 2016-02-29 13:22:08
+  nfo_close: 2016-02-29 13:22:08
+  reopen_dt: 2016-02-29 13:22:08
+  elf: MyString
+  etf: MyString
+  stp: MyString
+  primary_fund: MyString
+  primary_fd_code: 1
+  sip: MyString
+  swp: MyString
+  switch: MyString
+  mininvt: 9.99
+  multiples: 1
+  inc_invest: 9.99
+  adnmultiples: 9.99
+  fund_mgr1: MyString
+  fund_mgr2: MyString
+  fund_mgr3: MyString
+  fund_mgr4: MyString
+  since: 2016-02-29 13:22:08
+  status: MyString
+  cutsub: MyString
+  cutred: MyString
+  red: MyString
+  mob_name: MyString
+  div_freq: 1
+  scheme_symbol: MyString
+  fund_mgr_code1: 1
+  fund_mgr_code2: 1
+  fund_mgr_code3: 1
+  fund_mgr_code4: 1
+  redemption_date: 2016-02-29 13:22:08
+  dateofallot: 2016-02-29 13:22:08
+  div_code: 9.99
+  legalnames: MyString
+  amfitype: MyString
+  nontxnday: MyString
+  schemebank: MyString
+  schemebankaccountnumber: MyString
+  schemebankbranch: MyString
+  dividendoptionflag: MyString
+  lockinperiod: MyString
+  ispurchaseavailable: MyString
+  isredeemavailable: MyString
+  minredemptionamount: 9.99
+  redemptionmultipleamount: 9.99
+  minredemptionunits: 9.99
+  redemptionmultiplesunits: 9.99
+  minswitchamount: 9.99
+  switchmultipleamount: 9.99
+  minswitchunits: 9.99
+  switchmultiplesunits: 9.99
+  securitycode: MyString
+  unit: MyString
+  switchout: MyString
+  minswitchoutamount: 9.99
+  switchoutmultipleamount: 9.99
+  minswitchoutunits: 9.99
+  switchoutmultiplesunits: 9.99
+  incept_date: 2016-02-29 13:22:08
+  incept_nav: 9.99
+  defaultopt: MyString
+  defaultplan: 
+  lockperiod: 1
+  oddraftdate: 2016-02-29 13:22:08
+  upd_flag: MyString

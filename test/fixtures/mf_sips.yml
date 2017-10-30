@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schemecode: 1
+  amc_code: 1
+  frequency: MyString
+  sip: MyString
+  sipdates: MyString
+  sipdays1: 1
+  sipdays2: 1
+  sipdays3: 1
+  sipdays4: 1
+  sipdays5: 1
+  sipdays6: 1
+  sipdays7: 1
+  sipmininvest: 9.99
+  sipaddninvest: 9.99
+  sipfrequencyno: 1
+  maxentryload: 9.99
+  maxexitload: 9.99
+  entry_remark: MyString
+  exit_remark: MyString
+  note: MyString
+  upd_flag: MyString
+
+two:
+  schemecode: 1
+  amc_code: 1
+  frequency: MyString
+  sip: MyString
+  sipdates: MyString
+  sipdays1: 1
+  sipdays2: 1
+  sipdays3: 1
+  sipdays4: 1
+  sipdays5: 1
+  sipdays6: 1
+  sipdays7: 1
+  sipmininvest: 9.99
+  sipaddninvest: 9.99
+  sipfrequencyno: 1
+  maxentryload: 9.99
+  maxexitload: 9.99
+  entry_remark: MyString
+  exit_remark: MyString
+  note: MyString
+  upd_flag: MyString

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ind_code: 1
+  industry: MyString
+  ind_shortname: MyString
+  sector: MyString
+  upd_flag: MyString
+
+two:
+  ind_code: 1
+  industry: MyString
+  ind_shortname: MyString
+  sector: MyString
+  upd_flag: MyString

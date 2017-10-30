@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amc_code: 1
+  schemecode: 1
+  date: 2016-02-29 10:43:26
+  exratio: 9.99
+  upd_flag: MyString
+
+two:
+  amc_code: 1
+  schemecode: 1
+  date: 2016-02-29 10:43:26
+  exratio: 9.99
+  upd_flag: MyString
